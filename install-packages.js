@@ -1,0 +1,18 @@
+const emoji = require('node-emoji')
+const config = require('./install/config')
+const command = require('./helpers/command')
+
+const installPackages = function (type) {
+  console.info(emoji.get('coffee'), ' installing ' + type + ' packages')
+  config[type].map(function (item) {
+    console.info(type + ':', item)
+    command('. lib_sh/echos.sh && . lib_sh/requirers.sh && require_' + type + ' ' + item, __dirname, function (err, out) {
+      if (err) console.error(emoji.get('fire'), err)
+    })
+  })
+}
+
+installPackages('brew')
+installPackages('cask')
+installPackages('npm')
+installPackages('gem')
