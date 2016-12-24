@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
-source ../helpers/echos.sh
+source ./helpers/echos.sh
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
