@@ -8,7 +8,8 @@ const brew = [
   'mongodb',
   'wifi-password',
   'heroku-toolbelt',
-  'postgresql'
+  'postgresql',
+  'yarn'
 ]
 
 module.exports = brew
