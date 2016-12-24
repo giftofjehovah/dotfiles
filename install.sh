@@ -107,9 +107,6 @@ require_brew python
 # install curl
 require_brew curl
 
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # set zsh as the user login shell
 CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
 if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
@@ -118,10 +115,6 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   # chsh -s /usr/local/bin/zsh
   sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
   ok
-fi
-
-if [[ ! -d "$HOME/oh-my-zsh/custom/themes/powerlevel9k" ]]; then
-  git clone https://github.com/bhilburn/powerlevel9k.git $HOME/oh-my-zsh/custom/themes/powerlevel9k
 fi
 
 ###############################################################################
@@ -151,6 +144,31 @@ for file in .*; do
 done
 
 popd > /dev/null 2>&1
+
+##############################################################################
+# Oh-My-Zsh                                                                  #
+##############################################################################
+
+running "install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+running "install zsh-autosuggestions"
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+running "install zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+if [[ ! -d "$HOME/oh-my-zsh/custom/themes/powerlevel9k" ]]; then
+  git clone https://github.com/bhilburn/powerlevel9k.git $HOME/oh-my-zsh/custom/themes/powerlevel9k
+fi
+
+##############################################################################
+# Installing Fonts                                                           #
+##############################################################################
+
+bot "installing fonts"
+cp ./fonts/*.ttf /Library/Fonts/
+ok "All fonts installed"
 
 #####################################
 # Now we can switch to node.js mode

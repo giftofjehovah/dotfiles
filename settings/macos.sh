@@ -34,11 +34,15 @@ sudo pmset -a standbydelay 43200;ok
 
 running "Show battery life percentage."
 defaults write com.apple.menuextra.battery ShowPercent -string "YES";ok
+
+running "Show date info on menu bar"
+defaults write com.apple.menuextra.clock "DateFormat" "EEE d MMM  HH:mm"
 # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
 #rm -rf ~/Library/Application Support/Dock/desktoppicture.db
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
+
 ##############################################################################
 bot "Security"                                                               #
 ##############################################################################
@@ -96,6 +100,8 @@ running "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10;ok
 
+running "set trackpad speed"
+defaults write -g com.apple.trackpad.scaling 0.875
 ###############################################################################
 bot "Screen"                                                                  #
 ###############################################################################
@@ -255,11 +261,8 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true;
 bot "iTerm 2"                                                                 #
 ###############################################################################
 
-running "Installing the Solarized Light theme for iTerm (opening file)"
-open "./configs/Solarized Light.itermcolors";ok\
-
-running "Installing the Patched Solarized Dark theme for iTerm (opening file)"
-open "./configs/Solarized Dark Patch.itermcolors";ok
+running "Installing the OceanicMaterial theme for iTerm (opening file)"
+open "./iterm/OceanicMaterial.itermcolors";ok
 
 running "Don’t display the annoying prompt when quitting iTerm"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false;ok
