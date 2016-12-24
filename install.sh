@@ -36,72 +36,6 @@ if sudo grep -q "# %wheel\tALL=(ALL) NOPASSWD: ALL" "/etc/sudoers"; then
   fi
 fi
 
-grep 'user = GITHUBUSER' ./homedir/.gitconfig > /dev/null 2>&1
-if [[ $? = 0 ]]; then
-    read -r -p "What is your github.com username? " githubuser
-
-  fullname=`osascript -e "long user name of (system info)"`
-
-  if [[ -n "$fullname" ]];then
-    lastname=$(echo $fullname | awk '{print $2}');
-    firstname=$(echo $fullname | awk '{print $1}');
-  fi
-
-  if [[ -z $lastname ]]; then
-    lastname=`dscl . -read /Users/$(whoami) | grep LastName | sed "s/LastName: //"`
-  fi
-  if [[ -z $firstname ]]; then
-    firstname=`dscl . -read /Users/$(whoami) | grep FirstName | sed "s/FirstName: //"`
-  fi
-  email=`dscl . -read /Users/$(whoami)  | grep EMailAddress | sed "s/EMailAddress: //"`
-
-  if [[ ! "$firstname" ]];then
-    response='n'
-  else
-    echo -e "I see that your full name is $COL_YELLOW$firstname $lastname$COL_RESET"
-    read -r -p "Is this correct? [Y|n] " response
-  fi
-
-  if [[ $response =~ ^(no|n|N) ]];then
-    read -r -p "What is your first name? " firstname
-    read -r -p "What is your last name? " lastname
-  fi
-  fullname="$firstname $lastname"
-
-  bot "Great $fullname, "
-
-  if [[ ! $email ]];then
-    response='n'
-  else
-    echo -e "The best I can make out, your email address is $COL_YELLOW$email$COL_RESET"
-    read -r -p "Is this correct? [Y|n] " response
-  fi
-
-  if [[ $response =~ ^(no|n|N) ]];then
-    read -r -p "What is your email? " email
-    if [[ ! $email ]];then
-      error "you must provide an email to configure .gitconfig"
-      exit 1
-    fi
-  fi
-
-  running "replacing items in .gitconfig with your info ($COL_YELLOW$fullname, $email, $githubuser$COL_RESET)"
-
-  sed -i "s/GITHUBFULLNAME/$firstname $lastname/" ./homedir/.gitconfig > /dev/null 2>&1 | true
-  if [[ ${PIPESTATUS[0]} != 0 ]]; then
-    echo
-    running "looks like you are using MacOS sed rather than gnu-sed, accommodating"
-    sed -i '' "s/GITHUBFULLNAME/$firstname $lastname/" ./homedir/.gitconfig;
-    sed -i '' 's/GITHUBEMAIL/'$email'/' ./homedir/.gitconfig;
-    sed -i '' 's/GITHUBUSER/'$githubuser'/' ./homedir/.gitconfig;
-  else
-    echo
-    bot "looks like you are already using gnu-sed. woot!"
-    sed -i 's/GITHUBEMAIL/'$email'/' ./homedir/.gitconfig;
-    sed -i 's/GITHUBUSER/'$githubuser'/' ./homedir/.gitconfig;
-  fi
-fi
-
 pub=$HOME/.ssh/id_rsa.pub
 echo 'Checking for SSH key, generating one if it does not exist...'
 [[ -f $pub ]] || ssh-keygen -t rsa
@@ -168,6 +102,13 @@ require_brew zsh
 require_brew ruby
 # install node
 require_brew node
+# install python
+require_brew python
+# install curl
+require_brew curl
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # set zsh as the user login shell
 CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
@@ -179,9 +120,37 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
-  git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
+if [[ ! -d "$HOME/oh-my-zsh/custom/themes/powerlevel9k" ]]; then
+  git clone https://github.com/bhilburn/powerlevel9k.git $HOME/oh-my-zsh/custom/themes/powerlevel9k
 fi
+
+###############################################################################
+# Symlinks home files                                                         #
+###############################################################################
+
+bot "creating symlinks for project dotfiles..."
+pushd home > /dev/null 2>&1
+now=$(date +"%Y.%m.%d.%H.%M.%S")
+
+for file in .*; do
+  if [[ $file == "." || $file == ".." ]]; then
+    continue
+  fi
+  running "~/$file"
+  # if the file exists:
+  if [[ -e ~/$file ]]; then
+      mkdir -p ~/.dotfiles_backup/$now
+      mv ~/$file ~/.dotfiles_backup/$now/$file
+      echo "backup saved as ~/.dotfiles_backup/$now/$file"
+  fi
+  # symlink might still exist
+  unlink ~/$file > /dev/null 2>&1
+  # create the link
+  ln -s ~/.dotfiles/home/$file ~/$file
+  echo -en '\tlinked';ok
+done
+
+popd > /dev/null 2>&1
 
 #####################################
 # Now we can switch to node.js mode
@@ -202,28 +171,20 @@ running "cleanup homebrew"
 brew cleanup > /dev/null 2>&1
 ok
 
-###############################################################################
-bot "Configuring General System UI/UX..."
-###############################################################################
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-running "closing any system preferences to prevent issues with automated changes"
-osascript -e 'tell application "System Preferences" to quit'
-ok
+##############################
+# setting up macos settings #
+#############################
+$HOME/.dot/settings/macos.sh
 
-###############################################################################
-bot "Terminal & iTerm2"
-###############################################################################
+###########
+# reboot #
+##########
 
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-bot "OK. Note that some of these changes require a logout/restart to take effect. Killing affected applications (so they can reboot)...."
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-  "Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
-  "iCal" "Terminal"; do
-  killall "${app}" > /dev/null 2>&1
-done
-
-bot "Woot! All done. Kill this terminal and launch iTerm"
+if [[ "Yes" == $(reboot) ]]
+then
+  echo "Rebooting."
+  sudo reboot
+  exit 0
+else
+  exit 1
+fi

@@ -38,3 +38,12 @@ function warn() {
 function error() {
     echo -e "$COL_RED[error]$COL_RESET "$1
 }
+
+function reboot() {
+  read -p "Do you want to reboot your computer now? (y/N)" choice
+  case "$choice" in
+    y | Yes | yes ) echo "Yes"; exit;; # If y | yes, reboot
+    n | N | No | no) echo "No"; exit;; # If n | no, exit
+    * ) echo "Invalid answer. Enter \"y/yes\" or \"N/no\"" && return;;
+  esac
+}
