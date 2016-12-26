@@ -194,7 +194,7 @@ ok
 # setting up node version manager  #
 ###################################
 
-n lastest
+n latest
 
 ##############################
 # setting up vim            #
@@ -204,6 +204,9 @@ bot "setting up vim"
 
 running "installing plugged for vim"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;ok
+
+running "downloading one dark theme"
+git clone git@github.com:joshdick/onedark.vim.git ~/.vim/plugged
 
 running "installing vim plugins"
 vim +PlugInstall;ok
