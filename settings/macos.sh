@@ -186,6 +186,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true;ok
 
+running "Changing wallpaper: "
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$HOME/.dot/wallpaper/spacegrey-bg'";ok
+
 ###############################################################################
 bot "Dock, Dashboard, and hot corners"                                        #
 ###############################################################################
