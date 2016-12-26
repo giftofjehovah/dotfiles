@@ -194,7 +194,7 @@ ok
 # setting up node version manager  #
 ###################################
 
-n latest
+sudo n latest
 
 ##############################
 # setting up vim            #
