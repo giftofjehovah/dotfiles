@@ -202,6 +202,13 @@ running "symlinking atom keybindings"
 rm ~/.atom/keymap.cson
 ln -s ~/.dot/atom/keymap.cson ~/.atom/keymap.cson
 
+#############################
+# symlink ubersicht widgets #
+#############################
+running "symlinking ubersicht widgets"
+rm ~/Library/Application\ Support/Übersicht/widgets
+ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widgets
+
 ###########
 # reboot #
 ##########
