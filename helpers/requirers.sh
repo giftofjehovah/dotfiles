@@ -75,6 +75,17 @@ function require_apm() {
     ok
 }
 
+function require_mas() {
+    running "running mas app: $1"
+    mas list | grep $1@
+    if [[ $? != 0 ]]; then
+        action "mas install $1"
+        mas install $1
+    fi
+    ok
+}
+
+
 function sourceNVM(){
     export NVM_DIR=~/.nvm
     source $(brew --prefix nvm)/nvm.sh
