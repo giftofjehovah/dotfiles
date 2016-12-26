@@ -9,7 +9,8 @@ const brew = [
   'wifi-password',
   'heroku-toolbelt',
   'postgresql',
-  'yarn'
+  'yarn',
+  'go'
 ]
 
 module.exports = brew

@@ -190,6 +190,27 @@ running "cleanup homebrew"
 brew cleanup > /dev/null 2>&1
 ok
 
+####################################
+# setting up node version manager  #
+###################################
+
+n lastest
+
+##############################
+# setting up vim            #
+#############################
+
+bot "setting up vim"
+
+running "installing plugged for vim"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;ok
+
+running "installing vim plugins"
+vim +PlugInstall;ok
+
+running "compiling YCM"
+~/.vim/plugged/youcompleteme/install.py --all
+
 ##############################
 # setting up macos settings #
 #############################
@@ -198,16 +219,16 @@ $HOME/.dot/settings/macos.sh
 ##############################
 # symlink atom keybindings  #
 #############################
-running "symlinking atom keybindings"
+bot "symlinking atom keybindings"
 rm ~/.atom/keymap.cson
-ln -s ~/.dot/atom/keymap.cson ~/.atom/keymap.cson
+ln -s ~/.dot/atom/keymap.cson ~/.atom/keymap.cson;ok
 
 #############################
 # symlink ubersicht widgets #
 #############################
-running "symlinking ubersicht widgets"
+bot "symlinking ubersicht widgets"
 rm ~/Library/Application\ Support/Übersicht/widgets
-ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widgets
+ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widgets;ok
 
 ###########
 # reboot #

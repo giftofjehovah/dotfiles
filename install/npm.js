@@ -4,7 +4,8 @@ const npm = [
   'http2server',
   'yo',
   'nodemon',
-  'vtop'
+  'vtop',
+  'typescript'
 ]
 
 module.exports = npm
