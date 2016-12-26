@@ -4,13 +4,13 @@ const brew = [
   'mas',
   'vim --override-system-vi',
   'wget --enable-iri',
-  'n',
   'mongodb',
   'wifi-password',
   'heroku-toolbelt',
   'postgresql',
   'yarn',
-  'go'
+  'go',
+  'rbenv'
 ]
 
 module.exports = brew

@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
+eval "$(rbenv init -)"
 # if you want to use this, change your non-ascii font to Droid Sans Mono for Awesome
 # POWERLEVEL9K_MODE='awesome-patched'
 export ZSH_THEME="agnoster"
@@ -35,5 +36,4 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
 source $HOME/.functions.sh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)

@@ -1,4 +1,5 @@
 const npm = [
+  'n',
   't2-cli',
   'gulp',
   'http2server',

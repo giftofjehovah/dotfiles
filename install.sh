@@ -194,7 +194,15 @@ ok
 # setting up node version manager  #
 ###################################
 
+running "setting up node version manager"
 sudo n latest
+
+###################################
+# setting up ruby version manager s#
+###################################
+
+running "setting up ruby version manager"
+rbenv install 2.3.3
 
 ##############################
 # setting up vim            #
@@ -209,7 +217,7 @@ running "downloading one dark theme"
 git clone git@github.com:joshdick/onedark.vim.git ~/.vim/plugged
 
 running "installing vim plugins"
-vim +PlugInstall;ok
+vim +PlugInstall +qall > /dev/null 2>&1
 
 running "compiling YCM"
 ~/.vim/plugged/youcompleteme/install.py --all
