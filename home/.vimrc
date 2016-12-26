@@ -24,9 +24,9 @@ call plug#end()
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backspace=2 " make backspace work normal
-set ttimeoutlen=0
+set ttimeoutlen=0 " same as MacVim; updates powerline immediately on Escape
 set mouse=a " use mouse everywhere
-set clipboard=unnamed
+set clipboard=unnamed " use system clipboard
 set autoindent
 set smartindent
 set noshowmode
