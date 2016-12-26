@@ -125,7 +125,7 @@ defaults write com.apple.finder DisableAllAnimations -bool true;ok
 
 running "Show icons for hard drives, servers, and removable media on the desktop"
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true;ok
 
@@ -179,15 +179,15 @@ chflags nohidden ~/Library;ok
 running "Show the /Volumes folder"
 sudo chflags nohidden /Volumes;ok
 
-running "Expand the File Info panes:"
+running "Expand the File Info panes"
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	General -bool true \
 	OpenWith -bool true \
 	Privileges -bool true;ok
 
-running "Changing wallpaper: "
-sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$HOME/.dot/wallpaper/spacegrey-bg'";ok
+running "Changing wallpaper"
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/.dot/wallpaper/spacegrey-bg.jpg'";ok
 
 ###############################################################################
 bot "Dock, Dashboard, and hot corners"                                        #
