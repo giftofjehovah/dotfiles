@@ -195,6 +195,12 @@ ok
 #############################
 $HOME/.dot/settings/macos.sh
 
+##############################
+# symlink atom keybindings  #
+#############################
+rm ~/.atom/keymap.cson
+ln -s ~/.dot/atom/keymap.cson ~/.atom/keymap.cson
+
 ###########
 # reboot #
 ##########
