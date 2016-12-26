@@ -1,6 +1,6 @@
 apiKey: 'd0ac5297efaba8ec4537320cad46383e' # put your forcast.io api key inside the quotes here
 
-refreshFrequency: 60000
+refreshFrequency: 60000 * 10
 
 style: """
   bottom: 15%
