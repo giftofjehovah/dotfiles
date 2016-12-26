@@ -168,7 +168,7 @@ fi
 ##############################################################################
 
 bot "installing fonts"
-cp ./fonts/*.ttf /Library/Fonts/
+cp ./fonts/*.ttf ~/Library/Fonts/
 ok "All fonts installed"
 
 #####################################
