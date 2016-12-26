@@ -206,7 +206,7 @@ ln -s ~/.dot/atom/keymap.cson ~/.atom/keymap.cson
 # symlink ubersicht widgets #
 #############################
 running "symlinking ubersicht widgets"
-rm ~/Library/Application\ Support/Übersicht/widgets
+rm -r ~/Library/Application\ Support/Übersicht/widgets
 ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widgets
 
 ###########
