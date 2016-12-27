@@ -241,6 +241,11 @@ bot "symlinking ubersicht widgets"
 rm ~/Library/Application\ Support/Übersicht/widgets
 ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widgets;ok
 
+#############################
+# create necessary folders  #
+#############################
+mkdir dev
+
 ###########
 # reboot #
 ##########
