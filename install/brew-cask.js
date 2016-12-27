@@ -22,8 +22,7 @@ const brewCask = [
   'sketch',
   'razer-synapse',
   'myo-connect',
-  'steam',
-  'enpass'
+  'steam'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
