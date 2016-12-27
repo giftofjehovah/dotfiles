@@ -102,4 +102,4 @@ function o() {
 }
 
 # Create a new git repo with one README commit and CD into it
-function gitnr() { mkdir $1; cd $1; git init; touch README; git add README; git commit -m "inital commit";}
+function mkgd() { mkdir $1; cd $1; git init; touch README; git add README; git commit -m "inital commit";}
