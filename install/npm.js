@@ -6,7 +6,10 @@ const npm = [
   'yo',
   'nodemon',
   'vtop',
-  'typescript'
+  'typescript',
+  'angular-cli',
+  'create-react-app',
+  'ember-cli'
 ]
 
 module.exports = npm
