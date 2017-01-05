@@ -72,8 +72,8 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false;ok
 bot "SSD-specific tweaks"                                                     #
 ###############################################################################
 
-running "Disable hibernation (speeds up entering sleep mode)"
-sudo pmset -a hibernatemode 0;ok
+running "make sure hibernation is default"
+sudo pmset -a hibernatemode 3;ok
 
 running "Disable the sudden motion sensor as it’s not useful for SSDs"
 sudo pmset -a sms 0;ok
