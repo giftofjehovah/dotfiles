@@ -7,7 +7,6 @@ const brew = [
   'mongodb',
   'wifi-password',
   'heroku-toolbelt',
-  'postgresql',
   'yarn',
   'go',
   'rbenv'

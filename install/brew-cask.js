@@ -14,7 +14,6 @@ const brewCask = [
   'emacs',
   'zeplin',
   'flux',
-  'psequel',
   'ubersicht',
   'sourcetree',
   'intellij-idea',
@@ -22,7 +21,9 @@ const brewCask = [
   'sketch',
   'razer-synapse',
   'myo-connect',
-  'steam'
+  'steam',
+  'sequel-pro',
+  'postgres'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
