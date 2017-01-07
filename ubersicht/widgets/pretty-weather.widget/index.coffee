@@ -3,7 +3,7 @@ apiKey: 'd0ac5297efaba8ec4537320cad46383e' # put your forcast.io api key inside 
 refreshFrequency: 60000 * 10
 
 style: """
-  bottom: 15%
+  bottom: 18%
   left: 50%
   margin: 0 0 0 -100px
   font-family: Berlin, Helvetica Neue

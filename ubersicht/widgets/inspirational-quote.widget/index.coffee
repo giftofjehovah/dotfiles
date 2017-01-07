@@ -3,7 +3,7 @@ command: 'curl -s "http://feeds.feedburner.com/brainyquote/QUOTEBR"'
 refreshFrequency: 30000
 
 style: """
-  bottom: 70px
+  bottom: 90px
   left: 0
   color: #fff
   font-family: Gotham Light
