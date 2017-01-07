@@ -24,6 +24,7 @@ const brewCask = [
   'steam',
   'sequel-pro',
   'postgres'
+  'virtualbox'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
