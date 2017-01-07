@@ -79,6 +79,15 @@ nmap <c-p> :e <c-d>
 vnoremap < <gv
 vnoremap > >gv
 
+" map alt j & k to move lines up and down, use 'sed -n l' in cli to find out
+" special char
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
 map <Leader>a ggVG
 map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
@@ -102,6 +111,7 @@ au InsertEnter * exec "inoremap <silent> " .     g:UltiSnipsJumpBackwardTrigger 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
+let NERDTreeShowHidden=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " functions
