@@ -48,6 +48,11 @@ set laststatus=2 " always show the status line
 let g:gitgutter_sign_column_always=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_show_hidden= 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
