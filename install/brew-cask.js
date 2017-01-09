@@ -23,8 +23,9 @@ const brewCask = [
   'myo-connect',
   'steam',
   'sequel-pro',
-  'postgres'
-  'virtualbox'
+  'postgres',
+  'virtualbox',
+  'hyper'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
@@ -50,7 +51,8 @@ const fonts = [
   'font-inconsolata-for-powerline',
   'font-roboto-mono',
   'font-roboto-mono-for-powerline',
-  'font-source-code-pro'
+  'font-source-code-pro',
+  'font-meslo-lg-for-powerline'
 ]
 
 const all = [...brewCask, ...quickLookPlugin, ...fonts]
