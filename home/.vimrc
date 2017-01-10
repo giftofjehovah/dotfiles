@@ -78,8 +78,8 @@ nnoremap <Leader>d yyp
 
 nmap <Leader>m :NERDTreeToggle<CR>
 nmap <Leader>t :tabnew<CR>
-nmap t o<ESC>k
-nmap T O<ESC>j
+nmap t o<ESC>
+nmap T O<ESC>
 nmap <c-p> :e <c-d>
 
 vnoremap < <gv
