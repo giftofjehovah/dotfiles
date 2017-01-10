@@ -100,7 +100,9 @@ module.exports = {
     'hyperline',
     'hyperlinks',
     'hyperfull',
-    'hyperterm-cursor'
+    'hyperterm-cursor',
+    'hyperterm-paste',
+    'hypercwd'
   ],
 
   // in development, you can create a directory under
