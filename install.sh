@@ -158,11 +158,6 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plu
 running "install zsh-syntax-highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-if [[ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel9k" ]]; then
-  running "install powerlevel9k"
-  git clone https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
-fi
-
 ##############################################################################
 # Installing Fonts                                                           #
 ##############################################################################
