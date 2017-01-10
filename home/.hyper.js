@@ -98,9 +98,9 @@ module.exports = {
     // 'hyper-electron-highlighter',
     'hyperterm-panda',
     'hyperline',
-//    'hyperterm-alternatescroll',
     'hyperlinks',
-    'hyperfull'
+    'hyperfull',
+    'hyperterm-cursor'
   ],
 
   // in development, you can create a directory under
