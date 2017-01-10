@@ -18,6 +18,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'valloric/youcompleteme'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

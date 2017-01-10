@@ -95,9 +95,10 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-electron-highlighter',
+    // 'hyper-electron-highlighter',
+    'hyperterm-panda',
     'hyperline',
-    'hyperterm-alternatescroll',
+//    'hyperterm-alternatescroll',
     'hyperlinks',
     'hyperfull'
   ],
