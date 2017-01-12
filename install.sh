@@ -239,7 +239,7 @@ ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widget
 #############################
 # create necessary folders  #
 #############################
-mkdir dev
+mkdir ~/dev
 
 ###########
 # reboot #
