@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 # Create a new directory and enter it
-function mkd() {
-	mkdir -p "$@" && cd "$_";
+  function mkd() {
+          mkdir -p "$@" && cd "$_";
 }
 
-# Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
+  # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 function targz() {
-	local tmpFile="${@%/}.tar";
-	tar -cvf "${tmpFile}" --exclude=".DS_Store" "${@}" || return 1;
+          local tmpFile="${@%/}.tar";
+          tar -cvf "${tmpFile}" --exclude=".DS_Store" "${@}" || return 1;
 
-	size=$(
-		stat -f"%z" "${tmpFile}" 2> /dev/null; # macOS `stat`
+          size=$(
+                  stat -f"%z" "${tmpFile}" 2> /dev/null; # macOS `stat`
 		stat -c"%s" "${tmpFile}" 2> /dev/null;  # GNU `stat`
 	);
 
@@ -131,4 +131,4 @@ function o() {
 }
 
 # Create a new git repo with one README commit and CD into it
-function mkgd() { mkdir $1; cd $1; git init; touch README; git add README; git commit -m "inital commit";}
+function gitdir() { mkdir $1; cd $1; git init; touch README; git add README; git commit -m "inital commit";}
