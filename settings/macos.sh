@@ -270,8 +270,8 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true;
 bot "iTerm 2"                                                                 #
 ###############################################################################
 
-running "Installing the OceanicMaterial theme for iTerm (opening file)"
-open "./iterm/OceanicMaterial.itermcolors";ok
+running "Installing the Panda Syntax theme for iTerm (opening file)"
+open "./iterm/panda-syntax.itermcolors";ok
 
 running "Don’t display the annoying prompt when quitting iTerm"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false;ok
