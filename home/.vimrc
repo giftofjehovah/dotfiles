@@ -6,7 +6,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'joshdick/onedark.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
@@ -19,6 +18,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
+Plug 'yggdroot/indentline'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,6 +47,12 @@ set number " turn on line numbers
 syntax on " Enable syntax highlighting
 set laststatus=2 " always show the status line
 let g:gitgutter_sign_column_always=1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" IndentLine
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indentLine_char = '|'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
@@ -107,6 +113,7 @@ autocmd FileType html UltiSnipsAddFiletypes html
 autocmd FileType js UltiSnipsAddFiletypes javascript-jasmine
 autocmd FileType js UltiSnipsAddFiletypes javascript-node
 autocmd FileType js UltiSnipsAddFiletypes javascript
+autocmd BufRead * :IndentLinesEnable
 
 au BufWritePost .vimrc so ~/.vimrc
 au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger     . " <C-R>=g:UltiSnips_Complete()<cr>"
