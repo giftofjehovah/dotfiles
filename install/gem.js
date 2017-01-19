@@ -1,7 +1,6 @@
 const gem = [
   'rails --no-ri --no-rdoc',
-  'cocoapods',
-  'bundler'
+  'cocoapods'
 ]
 
 module.exports = gem
