@@ -18,7 +18,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
-Plug 'yggdroot/indentline'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -48,12 +47,6 @@ syntax on " Enable syntax highlighting
 set laststatus=2 " always show the status line
 let g:gitgutter_sign_column_always=1
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" IndentLine
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:indentLine_char = '|'
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,6 +58,7 @@ let g:ctrlp_show_hidden= 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='onedark'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
@@ -109,11 +103,9 @@ map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-autocmd FileType html UltiSnipsAddFiletypes html
-autocmd FileType js UltiSnipsAddFiletypes javascript-jasmine
-autocmd FileType js UltiSnipsAddFiletypes javascript-node
-autocmd FileType js UltiSnipsAddFiletypes javascript
-autocmd BufRead * :IndentLinesEnable
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-standard
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-angular
+
 
 au BufWritePost .vimrc so ~/.vimrc
 au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger     . " <C-R>=g:UltiSnips_Complete()<cr>"

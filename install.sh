@@ -241,6 +241,11 @@ ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/widget
 #############################
 mkdir ~/dev
 
+####################
+# symlink snippets #
+####################
+ln -s ~/.dot/snippets/javascript-standard.snippets ~/.vim/plugged/vim-snippets/Ultisnips
+
 ###########
 # reboot #
 ##########
