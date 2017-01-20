@@ -18,6 +18,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -36,6 +37,8 @@ set shiftwidth=2
 set softtabstop=2
 set nosmarttab
 set autoread
+set encoding=utf8
+"set guifont=SourceCode 12
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI

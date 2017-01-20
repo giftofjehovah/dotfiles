@@ -52,7 +52,8 @@ const fonts = [
   'font-roboto-mono',
   'font-roboto-mono-for-powerline',
   'font-source-code-pro',
-  'font-meslo-lg-for-powerline'
+  'font-meslo-lg-for-powerline',
+  'font-firacode-nerd-font-mono'
 ]
 
 const all = [...brewCask, ...quickLookPlugin, ...fonts]
