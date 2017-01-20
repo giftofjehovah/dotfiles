@@ -19,6 +19,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
