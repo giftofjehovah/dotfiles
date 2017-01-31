@@ -181,6 +181,8 @@ bot "installing packages from install-packages.js..."
 node install-packages.js
 ok
 
+sudo xcodebuild -license accept
+
 running "cleanup homebrew"
 brew cleanup > /dev/null 2>&1
 ok
@@ -212,7 +214,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 #git clone git@github.com:joshdick/onedark.vim.git ~/.vim/plugged/
 
 running "installing vim plugins"
-vim +PlugInstall +qall > /dev/null 2>&1
+vim +PlugInstall +qall
 
 running "compiling YCM"
 cd ~/.vim/plugged/youcompleteme/

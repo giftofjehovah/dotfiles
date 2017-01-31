@@ -15,7 +15,8 @@ const apm = [
   'set-syntax',
   'standard-formatter',
   'standardjs-snippets',
-  'vim-mode'
+  'vim-mode',
+  'react'
 ]
 
 module.exports = apm
