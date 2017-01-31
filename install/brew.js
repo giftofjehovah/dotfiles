@@ -9,7 +9,8 @@ const brew = [
   'heroku-toolbelt',
   'yarn',
   'go',
-  'rbenv'
+  'rbenv',
+  'mono'
 ]
 
 module.exports = brew

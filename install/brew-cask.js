@@ -25,7 +25,8 @@ const brewCask = [
   'sequel-pro',
   'postgres',
   'virtualbox',
-  'hyper'
+  'hyper',
+  'cargo'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
@@ -43,7 +44,6 @@ const quickLookPlugin = [
 ]
 
 const fonts = [
-  'font-awesome',
   'font-awesome-terminal-fonts',
   'font-hack',
   'font-inconsolata-dz-for-powerline',

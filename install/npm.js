@@ -9,7 +9,7 @@ const npm = [
   'typescript',
   'angular-cli',
   'create-react-app',
-  'ember-cli'
+  'ember-cli',
   'flow-bin'
 ]
 

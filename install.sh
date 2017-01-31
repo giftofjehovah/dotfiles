@@ -208,13 +208,15 @@ bot "setting up vim"
 running "installing plugged for vim"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;ok
 
-running "downloading one dark theme"
-git clone git@github.com:joshdick/onedark.vim.git ~/.vim/plugged
+#running "downloading one dark theme"
+#git clone git@github.com:joshdick/onedark.vim.git ~/.vim/plugged/
 
 running "installing vim plugins"
 vim +PlugInstall +qall > /dev/null 2>&1
 
 running "compiling YCM"
+cd ~/.vim/plugged/youcompleteme/
+git submodule update --init --recursive
 ~/.vim/plugged/youcompleteme/install.py --all
 
 ##############################
