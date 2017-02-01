@@ -220,7 +220,7 @@ running "compiling YCM"
 cd ~/.vim/plugged/youcompleteme/
 git submodule update --init --recursive
 ~/.vim/plugged/youcompleteme/install.py --all
-
+cd ~/.dot
 ##############################
 # setting up macos settings #
 #############################
