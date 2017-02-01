@@ -13,13 +13,13 @@ Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'sirver/ultisnips'
 Plug 'scrooloose/syntastic'
-Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
