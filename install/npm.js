@@ -10,7 +10,7 @@ const npm = [
   'angular-cli',
   'create-react-app',
   'ember-cli',
-  'flow-bin'
+  'flow-bin',
   'standard'
 ]
 

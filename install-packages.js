@@ -1,4 +1,4 @@
-const emoji = require('node-emoji')
+const emoji = require('node-emoji');
 const config = require('./install/config')
 const command = require('./helpers/command')
 
