@@ -10,7 +10,9 @@ const brew = [
   'yarn',
   'go',
   'rbenv',
-  'mono'
+  'mono',
+  'leiningen',
+  'rlwrap'
 ]
 
 module.exports = brew
