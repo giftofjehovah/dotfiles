@@ -11,7 +11,8 @@ const npm = [
   'create-react-app',
   'ember-cli',
   'flow-bin',
-  'standard'
+  'standard',
+  'nightwatch'
 ]
 
 module.exports = npm
