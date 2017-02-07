@@ -17,7 +17,8 @@ const apm = [
   'standardjs-snippets',
   'vim-mode',
   'react',
-  'parinfer'
+  'parinfer',
+  'atom-panda-syntax'
 ]
 
 module.exports = apm
