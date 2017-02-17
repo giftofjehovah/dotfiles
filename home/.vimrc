@@ -39,7 +39,6 @@ set softtabstop=2
 set nosmarttab
 set autoread
 set encoding=utf8
-"set guifont=SourceCode 12
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI
