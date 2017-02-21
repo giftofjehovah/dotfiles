@@ -24,3 +24,5 @@ source $HOME/.aliases.sh
 source $HOME/.functions.sh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
+
+export PATH="$HOME/.yarn/bin:$PATH"

@@ -26,7 +26,8 @@ const brewCask = [
   'postgres',
   'virtualbox',
   'hyper',
-  'cargo'
+  'cargo',
+  'keybase'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
