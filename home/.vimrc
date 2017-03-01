@@ -14,12 +14,13 @@ Plug 'honza/vim-snippets'
 Plug 'sirver/ultisnips'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
+Plug 'pangloss/vim-javascript' 
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -75,6 +76,17 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_javascript_standard_generic = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Emmet
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:user_emmet_expandabbr_key = '<Leader>e'
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\      'quote_char': "'",
+\  },
+\}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
