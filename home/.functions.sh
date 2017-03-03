@@ -114,9 +114,9 @@ function a() {
 # given location
 function v() {
 	if [ $# -eq 0 ]; then
-		vim .;
+		mvim .;
 	else
-		vim "$@";
+		mvim "$@";
 	fi;
 }
 
