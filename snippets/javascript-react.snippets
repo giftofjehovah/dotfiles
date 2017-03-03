@@ -84,10 +84,28 @@ shouldComponentUpdate (nextProps, nextState) {
 }
 endsnippet
 
-#########
+########
 # MISC #
 ########
 
 snippet rbm "react bind method"
 this.${1:method} = this.$1.bind(this)
+endsnippet
+
+#########
+# REDUX #
+#########
+
+snippet rac "redux action creator"
+export const ${1:action} = (${0}) => ({ type:${2:type} })
+endsnippet
+
+snippet red "redux reducer"
+export function ${1:reducer} (state, action) {
+  const reducers = {
+    [${2:type}]: () => ${3:fn},
+    DEFAULT: () => state
+  }
+  return (reducers[action.type] || reducers.DEFAULT)()
+}
 endsnippet
