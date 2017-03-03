@@ -55,10 +55,7 @@ let g:gitgutter_sign_column_always=1
 " CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_show_hidden= 1
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|node_modules)$',
-  \ 'file': '\v\.(.DS_Store)$'
-  \ }
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Airline
