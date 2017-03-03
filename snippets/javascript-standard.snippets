@@ -35,7 +35,7 @@ endsnippet
 snippet lif= "let declaration and if statement"
 let ${1}
 if (${0}) {
-	${1} = ${2}
+	$1 = ${2}
 }
 endsnippet
 
@@ -78,14 +78,14 @@ else if (${1:condition}) {
 endsnippet
 
 snippet fl "for loop"
-for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length ${1:i} < ${2:len}; ${1:i}++) {
+for (let ${1:i} = 0, $1 < ${2:iterable}.length; $1++) {
 	${0}
 }
 endsnippet
 
 snippet fi "for in loop"
 for (let ${1:key} in ${2:source}) {
-	if (${2:source}.hasOwnProperty(${1:key})) {
+	if ($2.hasOwnProperty($1)) {
 		${0}
 	}
 }
@@ -184,7 +184,7 @@ function* (${1:arguments}) {
 endsnippet
 
 snippet gfn "named generator function"
-function* ${1:name}(${1:arguments}) {
+function* ${1:name}(${2:arguments}) {
 	${0}
 }
 endsnippet
@@ -250,7 +250,7 @@ endsnippet
 snippet csx "child class"
 class ${1:name} extends ${2:base} {
 	constructor(${3:arguments}) {
-		super(${3:arguments})
+		super($3)
 		${0}
 	}
 }
@@ -529,7 +529,7 @@ endsnippet
 snippet cb "Node.js style callback"
 function (err, ${1:value}) {
 	if (err) throw err
-	t${0}
+	${0}
 }
 endsnippet
 
@@ -538,7 +538,7 @@ require('${1:module}')
 endsnippet
 
 snippet cre "require and assign a module"
-const ${1:module} = require('${1:module}')
+const ${1:module} = require('$1')
 endsnippet
 
 snippet em "export member"
