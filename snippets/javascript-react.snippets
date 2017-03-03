@@ -1,0 +1,93 @@
+priority 1
+
+###########################################################################
+#                              React Snippets                             #
+###########################################################################
+
+#########
+# Class #
+#########
+
+snippet rcc "react class"
+import React, { Component, PropTypes } from 'react'
+
+export default class ${1:component} extends Component {
+  render() {
+    ${2}
+  }
+}
+endsnippet
+
+#################
+# Class Methods #
+#################
+
+snippet rcon "react constructor"
+constructor(props) {
+  super(props)
+  ${1}
+}
+endsnippet
+
+snippet rpt "react proptypes"
+static get propTypes () {
+  return {
+    ${1}
+  }
+}
+endsnippet
+
+
+#####################
+# Lifecycle Methods #
+#####################
+
+snippet cdm "componentDidMount"
+componentDidMount () {
+  ${1}
+}
+endsnippet
+
+snippet cwum "componentWillUnmount"
+componentWillUnmount () {
+  ${1}
+}
+endsnippet
+
+snippet cwm "componentWillMount"
+componentWillMount () {
+  ${1}
+}
+endsnippet
+
+snippet cdup "componentDidUpdate"
+componentDidUpdate (prevProps, prevState) {
+  ${1}
+}
+endsnippet
+
+snippet cwup "componentWillUpdate"
+componentWillUpdate (nextProps, nextState) {
+${1}
+}
+endsnippet
+
+snippet cwrp "componentWillReceiveProps"
+componentWillReceiveProps (nextProps) {
+  ${1}
+}
+endsnippet
+
+snippet scup "shouldComponentUpdate"
+shouldComponentUpdate (nextProps, nextState) {
+  ${1}
+}
+endsnippet
+
+#########
+# MISC #
+########
+
+snippet rbm "react bind method"
+this.${1:method} = this.$1.bind(this)
+endsnippet

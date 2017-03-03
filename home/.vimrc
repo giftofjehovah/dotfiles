@@ -14,7 +14,7 @@ Plug 'honza/vim-snippets'
 Plug 'sirver/ultisnips'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript' 
+Plug 'pangloss/vim-javascript'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
@@ -59,7 +59,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|node_modules)$',
   \ 'file': '\v\.(.DS_Store)$'
   \ }
- 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,7 +84,7 @@ let g:syntastic_javascript_standard_generic = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Emmet
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:user_emmet_expandabbr_key = '<Leader>e'
+let g:user_emmet_expandabbr_key = '<D-e>'
 let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
@@ -136,6 +136,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-standard
+autocmd FileType javascript UltiSnipsAddFiletypes react
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-angular
 
 

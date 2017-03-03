@@ -249,6 +249,7 @@ mkdir ~/dev
 # symlink snippets #
 ####################
 ln -s ~/.dot/snippets/javascript-standard.snippets ~/.vim/plugged/vim-snippets/Ultisnips
+ln -s ~/.dot/snippets/javascript-react.snippets ~/.vim/plugged/vim-snippets/Ultisnips
 
 ###########
 # reboot #
