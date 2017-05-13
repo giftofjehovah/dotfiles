@@ -27,7 +27,8 @@ const brewCask = [
   'virtualbox',
   'hyper',
   'cargo',
-  'keybase'
+  'keybase',
+  'mongodb-compass'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
