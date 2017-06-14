@@ -28,7 +28,8 @@ const brewCask = [
   'hyper',
   'cargo',
   'keybase',
-  'mongodb-compass'
+  'mongodb-compass',
+  'visual-studio-code'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
