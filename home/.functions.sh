@@ -130,5 +130,12 @@ function o() {
 	fi;
 }
 
+function c() {
+	if [ $# -eq 0 ]; then
+		code .;
+	else
+		code "$@";
+	fi;
+}
 # Create a new git repo with one README commit and CD into it
 function gitdir() { mkdir $1; cd $1; git init; touch README; git add README; git commit -m "inital commit";}
