@@ -1,0 +1,12 @@
+{
+  "editor.fontFamily": "FiraCode-Light",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.tabCompletion": true,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "vscode-icons",
+  "vim.disableAnnoyingNeovimMessage": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.snippetSuggestions": "top",
+  "vim.useSystemClipboard": true
+}

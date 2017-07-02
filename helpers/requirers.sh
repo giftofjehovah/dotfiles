@@ -75,6 +75,16 @@ function require_apm() {
     ok
 }
 
+function require_code() {
+    running "checking vscode plugin: $1"
+    code --list-extensions | grep $1@ > /dev/null
+    if [[ $? != 0 ]]; then
+        action "code --install-extension $1"
+        code --install-extension $1
+    fi
+    ok
+}
+
 function require_mas() {
     running "running mas app: $1"
     mas list | grep $1@
