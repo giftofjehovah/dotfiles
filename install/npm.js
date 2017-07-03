@@ -1,18 +1,20 @@
 const npm = [
-  'n',
-  't2-cli',
-  'gulp',
-  'http2server',
-  'yo',
-  'nodemon',
-  'vtop',
-  'typescript',
-  'angular-cli',
-  'create-react-app',
-  'ember-cli',
-  'flow-bin',
-  'standard',
-  'nightwatch'
-]
+  "n",
+  "t2-cli",
+  "gulp",
+  "http2server",
+  "yo",
+  "nodemon",
+  "vtop",
+  "typescript",
+  "angular-cli",
+  "create-react-app",
+  "ember-cli",
+  "flow-bin",
+  "standard",
+  "nightwatch",
+  "eslint",
+  "standard"
+];
 
-module.exports = npm
+module.exports = npm;
