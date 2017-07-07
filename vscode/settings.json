@@ -9,5 +9,8 @@
   "workbench.colorTheme": "One Dark Pro",
   "editor.snippetSuggestions": "top",
   "vim.useSystemClipboard": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 120
 }

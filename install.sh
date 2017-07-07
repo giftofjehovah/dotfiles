@@ -221,14 +221,16 @@ cd ~/.vim/plugged/youcompleteme/
 git submodule update --init --recursive
 ~/.vim/plugged/youcompleteme/install.py --all
 cd ~/.dot
+
 ##############################
 # setting up macos settings #
 #############################
 $HOME/.dot/settings/macos.sh
 
-###############################
-# symlink atom keybindings  #
-#############################
+#######################################
+# symlink vscode settings & snippets  #
+#######################################
+
 bot "symlinking vscode settings"
 rm ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.dot/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json;ok
@@ -240,6 +242,7 @@ ln -s ~/.dot/vscode/javascript.json ~/Library/Application\ Support/Code/User/sni
 bot "symlinking vscode javascript react snippets"
 rm ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json
 ln -s ~/.dot/vscode/javascriptreact.json ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json;ok
+
 #############################
 # symlink atom keybindings  #
 #############################
