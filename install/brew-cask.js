@@ -31,7 +31,8 @@ const brewCask = [
   "mongodb-compass",
   "visual-studio-code",
   "now",
-  "duet"
+  "duet",
+  "exodus"
 ];
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
