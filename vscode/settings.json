@@ -12,5 +12,7 @@
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
   "prettier.semi": false,
-  "prettier.printWidth": 120
+  "prettier.printWidth": 120,
+  "vim.leader": " ",
+  "vim.easymotion": true
 }
