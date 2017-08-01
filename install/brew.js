@@ -12,7 +12,8 @@ const brew = [
   'rbenv',
   'mono',
   'leiningen',
-  'rlwrap'
+  'rlwrap',
+  'elixir'
 ]
 
 module.exports = brew
