@@ -14,7 +14,8 @@ const code = [
   'vscodevim.vim',
   'robertohuertasm.vscode-icons',
   'samverschueren.yo',
-  'eamodio.gitlens'
+  'eamodio.gitlens',
+  'mjmcloug.vscode-elixir'
 ]
 
 module.exports = code
