@@ -4,15 +4,17 @@
   "editor.tabSize": 2,
   "editor.tabCompletion": true,
   "editor.formatOnSave": true,
-  "workbench.iconTheme": "vscode-icons",
-  "vim.disableAnnoyingNeovimMessage": true,
   "workbench.colorTheme": "One Dark Pro",
-  "editor.snippetSuggestions": "top",
-  "vim.useSystemClipboard": true,
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.printWidth": 120,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.snippetSuggestions": "top",
+  "eslint.enable": false,
+  "vim.useSystemClipboard": true,
+  "vim.disableAnnoyingNeovimMessage": true,
   "vim.leader": " ",
-  "vim.easymotion": true
+  "vim.easymotion": true,
+  "vim.statusBarColorControl": true
 }
