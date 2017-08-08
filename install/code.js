@@ -15,7 +15,8 @@ const code = [
   'robertohuertasm.vscode-icons',
   'samverschueren.yo',
   'eamodio.gitlens',
-  'mjmcloug.vscode-elixir'
+  'mjmcloug.vscode-elixir',
+  'donjayamanne.jupyter'
 ]
 
 module.exports = code
