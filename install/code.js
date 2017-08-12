@@ -16,7 +16,8 @@ const code = [
   'samverschueren.yo',
   'eamodio.gitlens',
   'mjmcloug.vscode-elixir',
-  'donjayamanne.jupyter'
+  'donjayamanne.jupyter',
+  'formulahendry.code-runner'
 ]
 
 module.exports = code
