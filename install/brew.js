@@ -13,7 +13,8 @@ const brew = [
   'mono',
   'leiningen',
   'rlwrap',
-  'elixir'
+  'elixir',
+  'pandoc'
 ]
 
 module.exports = brew
