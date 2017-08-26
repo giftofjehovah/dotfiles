@@ -34,7 +34,8 @@ const brewCask = [
   'duet',
   'exodus',
   'rescuetime',
-  'mactex'
+  'mactex',
+  'astropad'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
