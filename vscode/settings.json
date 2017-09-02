@@ -16,5 +16,59 @@
   "vim.disableAnnoyingNeovimMessage": true,
   "vim.leader": " ",
   "vim.easymotion": true,
-  "vim.statusBarColorControl": true
+  "vim.statusBarColorControl": true,
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "w"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "j"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesDownAction",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "k"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesUpAction",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "d"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.copyLinesDownAction",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "t"],
+      "after": ["o", "<ESC>"]
+    },
+    {
+      "before": ["leader", "T"],
+      "after": ["O", "<ESC>"]
+    },
+    {
+      "before": ["y"],
+      "after": ["<C-r>"]
+    }
+  ]
 }
