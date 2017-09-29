@@ -70,5 +70,6 @@
       "before": ["y"],
       "after": ["<C-r>"]
     }
-  ]
+  ],
+  "prettier.trailingComma": "none"
 }
