@@ -14,7 +14,8 @@ const brew = [
   'leiningen',
   'rlwrap',
   'elixir',
-  'pandoc'
+  'pandoc',
+  'graphviz'
 ]
 
 module.exports = brew
