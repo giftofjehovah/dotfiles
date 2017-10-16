@@ -71,5 +71,6 @@
       "after": ["<C-r>"]
     }
   ],
-  "prettier.trailingComma": "none"
+  "prettier.trailingComma": "none",
+  "kite.showTourOnStartup": false
 }
