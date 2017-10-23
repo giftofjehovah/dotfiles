@@ -17,7 +17,8 @@ const code = [
   'eamodio.gitlens',
   'mjmcloug.vscode-elixir',
   'donjayamanne.jupyter',
-  'formulahendry.code-runner'
+  'formulahendry.code-runner',
+  'tinkertrain.theme-panda'
 ]
 
 module.exports = code
