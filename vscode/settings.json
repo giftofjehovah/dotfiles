@@ -4,7 +4,7 @@
   "editor.tabSize": 2,
   "editor.tabCompletion": true,
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Panda Syntax",
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
   "prettier.semi": false,
@@ -70,5 +70,7 @@
       "before": ["y"],
       "after": ["<C-r>"]
     }
-  ]
+  ],
+  "prettier.trailingComma": "none",
+  "kite.showTourOnStartup": false
 }

@@ -4,7 +4,8 @@ eval "$(rbenv init -)"
 export ZSH_THEME="agnoster"
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
-# disable weekly auto-update checks
+export PATH=~/Library/Python/2.7/bin/:$PATH
+ #disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
 # disable colors in ls
 # export DISABLE_LS_COLORS="true"
