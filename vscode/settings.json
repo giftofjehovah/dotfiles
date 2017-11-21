@@ -72,5 +72,5 @@
     }
   ],
   "prettier.trailingComma": "none",
-  "kite.showTourOnStartup": false
+  "editor.lineNumbers": "relative"
 }

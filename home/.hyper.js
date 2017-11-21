@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 14,
 
     // font family with optional fallbacks
     fontFamily: '"Fira Code", "Source Code Pro", "FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -65,6 +65,7 @@ module.exports = {
       lightCyan: '#00ffff',
       lightWhite: '#ffffff'
     },
+
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
     shell: '',
@@ -87,8 +88,7 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
-
-  // a list of plugins to fetch and install from npm
+ // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   // examples:
   //   `hyperpower`
@@ -96,6 +96,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     // 'hyper-electron-highlighter',
+    // 'hyperblue-vibrancy',
     'hyperterm-panda',
     'hyperline',
     'hyperlinks',
