@@ -14,7 +14,8 @@ const npm = [
   "standard",
   "nightwatch",
   "eslint",
-  "standard"
+  "standard",
+  "serverless"
 ];
 
 module.exports = npm;
