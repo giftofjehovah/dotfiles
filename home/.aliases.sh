@@ -19,3 +19,5 @@ alias -g C='| xargs echo -n | pbcopy'
 # Copy my public key to the pasteboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 alias wifi="wifi-password"
+alias pip3="source activate python3"
+alias pip2="source deactivate"
