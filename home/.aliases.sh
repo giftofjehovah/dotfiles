@@ -19,5 +19,13 @@ alias -g C='| xargs echo -n | pbcopy'
 # Copy my public key to the pasteboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 alias wifi="wifi-password"
+
+# swap python env
 alias pip3="source activate python3"
 alias pip2="source deactivate"
+
+#gcloud commands
+alias gstart="gcloud compute instances start"
+alias gstop="gcloud compute instances stop"
+alias ssh-fastai="gcloud compute ssh jon@fastai"
+alias open-fastai="open http://35.201.182.120:8888/"
