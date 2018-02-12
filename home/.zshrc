@@ -36,7 +36,6 @@ export PATH="/Users/jon/anaconda/bin:$PATH"
 if [ -f '/Users/jon/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jon/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-<<<<<<< HEAD
 if [ -f '/Users/jon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jon/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # tabtab source for serverless package
@@ -50,6 +49,3 @@ export PATH=/Users/jon/.local/bin/luna-studio:$PATH
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
-=======
-if [ -f '/Users/jon/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jon/google-cloud-sdk/completion.zsh.inc'; fi
->>>>>>> c4a15e09730155f463dba82dc6f998c2501396e9
