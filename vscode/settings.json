@@ -72,5 +72,6 @@
     }
   ],
   "prettier.trailingComma": "none",
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "window.zoomLevel": 0
 }

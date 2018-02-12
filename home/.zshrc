@@ -1,7 +1,8 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 eval "$(rbenv init -)"
-export ZSH_THEME="agnoster"
+export ZSH_THEME="spaceship"
+# export ZSH_THEME="agnoster"
 # export ZSH_THEME="hyperzsh"
 # Set to this to use case-sensitive completion
 export CASE_SENSITIVE="true"
@@ -43,3 +44,8 @@ if [ -f '/Users/jon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then sourc
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+export PATH=/Users/jon/.local/bin/luna-studio:$PATH
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
