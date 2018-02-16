@@ -47,5 +47,5 @@ if [ -f '/Users/jon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then sourc
 export PATH=/Users/jon/.local/bin/luna-studio:$PATH
 
 # Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+# autoload -U promptinit; promptinit
+# prompt spaceship
