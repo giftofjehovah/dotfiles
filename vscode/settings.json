@@ -73,5 +73,6 @@
   ],
   "prettier.trailingComma": "none",
   "editor.lineNumbers": "relative",
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "gitlens.keymap": "alternate"
 }
