@@ -27,5 +27,5 @@ alias pip2="source deactivate"
 #gcloud commands
 alias gstart="gcloud compute instances start"
 alias gstop="gcloud compute instances stop"
-alias ssh-fastai="gcloud compute ssh jon@fastai"
+alias ssh-fastai="gcloud compute ssh jon@fast-ai"
 alias open-fastai="open http://35.201.182.120:8888/"

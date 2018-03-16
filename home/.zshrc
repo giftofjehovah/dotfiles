@@ -16,7 +16,7 @@ export PATH=~/anaconda2/bin:$PATH
 export DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git npm brew osx extract z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git npm brew osx extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode)
 # customise promot for agnoster theme
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
@@ -47,5 +47,5 @@ if [ -f '/Users/jon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then sourc
 export PATH=/Users/jon/.local/bin/luna-studio:$PATH
 
 # Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+# autoload -U promptinit; promptinit
+# prompt spaceship
