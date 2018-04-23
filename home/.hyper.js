@@ -1,7 +1,8 @@
 module.exports = {
   config: {
+    opacity: 0.9,
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"Fira Code", "Source Code Pro", "FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -25,11 +26,6 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: `
-         x-screen x-row {
-           font-variant-ligatures: initial;
-         }
-    `,
 
     // set to `true` if you're using a Linux set up
     // that doesn't shows native menus
@@ -88,23 +84,13 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
- // a list of plugins to fetch and install from npm
+  // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   // examples:
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    // 'hyper-electron-highlighter',
-    // 'hyperblue-vibrancy',
-    'hyperterm-panda',
-    'hyperline',
-    'hyperlinks',
-    'hyperfull',
-    'hyperterm-cursor',
-    'hyperterm-paste',
-    'hypercwd'
-  ],
+  plugins: ['hyper-snazzy', 'hypercwd', 'hyper-tabs-enhanced', "hyper-opacity"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

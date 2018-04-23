@@ -7,19 +7,25 @@
   "workbench.colorTheme": "Panda Syntax",
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
-  "prettier.semi": false,
   "prettier.printWidth": 120,
   "workbench.iconTheme": "vscode-icons",
-  "editor.snippetSuggestions": "top",
   "eslint.enable": false,
   "vim.useSystemClipboard": true,
-  "vim.disableAnnoyingNeovimMessage": true,
   "vim.leader": " ",
   "vim.easymotion": true,
   "vim.statusBarColorControl": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "xml": {
+      "attr_quotes": "single"
+    }
+  },
   "vim.otherModesKeyBindingsNonRecursive": [
     {
-      "before": ["leader", "w"],
+      "before": [
+        "leader",
+        "w"
+      ],
       "after": [],
       "commands": [
         {
@@ -29,7 +35,10 @@
       ]
     },
     {
-      "before": ["leader", "j"],
+      "before": [
+        "leader",
+        "j"
+      ],
       "after": [],
       "commands": [
         {
@@ -39,7 +48,10 @@
       ]
     },
     {
-      "before": ["leader", "k"],
+      "before": [
+        "leader",
+        "k"
+      ],
       "after": [],
       "commands": [
         {
@@ -49,7 +61,10 @@
       ]
     },
     {
-      "before": ["leader", "d"],
+      "before": [
+        "leader",
+        "d"
+      ],
       "after": [],
       "commands": [
         {
@@ -59,20 +74,53 @@
       ]
     },
     {
-      "before": ["leader", "t"],
-      "after": ["o", "<ESC>"]
+      "before": [
+        "leader",
+        "t"
+      ],
+      "after": [
+        "o",
+        "<ESC>"
+      ]
     },
     {
-      "before": ["leader", "T"],
-      "after": ["O", "<ESC>"]
+      "before": [
+        "leader",
+        "T"
+      ],
+      "after": [
+        "O",
+        "<ESC>"
+      ]
     },
     {
-      "before": ["y"],
-      "after": ["<C-r>"]
+      "before": [
+        "y"
+      ],
+      "after": [
+        "<C-r>"
+      ]
     }
   ],
   "prettier.trailingComma": "none",
   "editor.lineNumbers": "relative",
   "window.zoomLevel": 0,
-  "gitlens.keymap": "alternate"
+  "gitlens.keymap": "alternate",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "vsicons.dontShowNewVersionMessage": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "triggerExpansionOnTab": true
+  },
+  "emmet.triggerExpansionOnTab": true
 }

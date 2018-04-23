@@ -8,6 +8,7 @@ export ZSH_THEME="spaceship"
 export CASE_SENSITIVE="true"
 export PATH=~/Library/Python/2.7/bin/:$PATH
 export PATH=~/anaconda2/bin:$PATH
+export PATH=/usr/local/bin/npm:$PATH
  #disable weekly auto-update checks
 # export DISABLE_AUTO_UPDATE="true"
 # disable colors in ls
