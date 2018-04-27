@@ -10,16 +10,16 @@
   "prettier.printWidth": 120,
   "workbench.iconTheme": "vscode-icons",
   "eslint.enable": false,
-  "vim.useSystemClipboard": true,
-  "vim.leader": " ",
-  "vim.easymotion": true,
-  "vim.statusBarColorControl": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
     "xml": {
       "attr_quotes": "single"
     }
   },
+  "vim.useSystemClipboard": true,
+  "vim.leader": " ",
+  "vim.easymotion": true,
+  "vim.useCtrlKeys": true,
   "vim.otherModesKeyBindingsNonRecursive": [
     {
       "before": [
@@ -91,14 +91,6 @@
       "after": [
         "O",
         "<ESC>"
-      ]
-    },
-    {
-      "before": [
-        "y"
-      ],
-      "after": [
-        "<C-r>"
       ]
     }
   ],
