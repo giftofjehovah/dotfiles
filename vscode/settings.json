@@ -108,11 +108,13 @@
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
   },
-  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "vsicons.dontShowNewVersionMessage": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "triggerExpansionOnTab": true
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground": "#c5c5c5"
+  }
 }

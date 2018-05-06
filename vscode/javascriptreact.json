@@ -1,5 +1,5 @@
 {
-/*
+	/*
 	// Place your snippets for JavaScript React here. Each snippet is defined under a snippet name and has a prefix, body and 
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
@@ -14,4 +14,34 @@
 		"description": "Log output to console"
 	}
 */
+	"console.log": {
+		"prefix": "cl",
+		"body": [
+			"console.log($0)"
+		],
+		"description": "console.log"
+	},
+	"const assignment": {
+		"prefix": "c",
+		"body": [
+			"const ${1:name} = ${2:value}"
+		],
+		"description": "const assignment"
+	},
+	"if statement": {
+		"prefix": "if",
+		"body": [
+			"if(${1:condition}) {", "	${0}",
+			"}"
+		],
+		"description": "const assignment"
+	},
+	"for in loop": {
+		"prefix": "fi",
+		"body": [
+			"for (let ${1:key} in ${2:source}) {", "	if(${2}.hasOwnProperty($1)) {", "		${0}", "	}",
+			"}"
+		],
+		"description": "for in loop"
+	}
 }
