@@ -1,11 +1,17 @@
 module.exports = {
   config: {
+    summon: {
+      hideDock: true,
+      hideOnBlur: true,
+      hotkey: 'Ctrl+`'
+    },
     opacity: 0.9,
     // default font size in pixels for all tabs
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: '"Fira Code", "Source Code Pro", "FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily:
+      '"Fira Code", "Source Code Pro", "FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -90,10 +96,10 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-snazzy', 'hypercwd', 'hyper-tabs-enhanced', "hyper-opacity"],
+  plugins: ['hyper-snazzy', 'hypercwd', 'hyper-tabs-enhanced', 'hyper-opacity', 'hyperterm-summon'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
   localPlugins: []
-}
+};

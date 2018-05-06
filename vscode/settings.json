@@ -36,8 +36,7 @@
     },
     {
       "before": [
-        "leader",
-        "j"
+        "<C-j>"
       ],
       "after": [],
       "commands": [
