@@ -115,5 +115,7 @@
   "emmet.triggerExpansionOnTab": true,
   "workbench.colorCustomizations": {
     "editorIndentGuide.activeBackground": "#c5c5c5"
-  }
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "prettier.semi": false
 }
