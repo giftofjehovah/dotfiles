@@ -38,7 +38,8 @@ const brewCask = [
   'astropad',
   'cheatsheet',
   'docker',
-  'java'
+  'java',
+  'oni'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
