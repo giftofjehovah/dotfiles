@@ -37,7 +37,8 @@ const brewCask = [
   'mactex',
   'astropad',
   'cheatsheet',
-  'docker'
+  'docker',
+  'java'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
