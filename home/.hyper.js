@@ -3,7 +3,7 @@ module.exports = {
     summon: {
       hideDock: true,
       hideOnBlur: true,
-      hotkey: 'Ctrl+`'
+      hotkey: 'Ctrl+Tab'
     },
     opacity: 0.9,
     // default font size in pixels for all tabs

@@ -3,11 +3,11 @@
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.tabCompletion": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "workbench.colorTheme": "Panda Syntax",
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
-  "prettier.printWidth": 120,
+  "prettier.printWidth": 100,
   "workbench.iconTheme": "vscode-icons",
   "eslint.enable": false,
   "emmet.syntaxProfiles": {
@@ -20,7 +20,7 @@
   "vim.leader": " ",
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindings": [
     {
       "before": [
         "leader",
@@ -55,6 +55,19 @@
       "commands": [
         {
           "command": "editor.action.moveLinesUpAction",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "j"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesDownAction",
           "args": []
         }
       ]
@@ -115,5 +128,6 @@
   "emmet.triggerExpansionOnTab": true,
   "workbench.colorCustomizations": {
     "editorIndentGuide.activeBackground": "#c5c5c5"
-  }
+  },
+  "gitlens.historyExplorer.enabled": true,
 }
