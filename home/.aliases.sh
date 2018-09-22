@@ -21,7 +21,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to 
 alias wifi="wifi-password"
 
 # swap python env
-alias pip3="source activate python3"
+# alias pip3="source activate python3"
 alias pip2="source deactivate"
 
 #gcloud commands
