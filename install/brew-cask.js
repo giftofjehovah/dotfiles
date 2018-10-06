@@ -13,7 +13,6 @@ const brewCask = [
   // 'logic',
   'emacs',
   'zeplin',
-  'flux',
   'ubersicht',
   'sourcetree',
   'intellij-idea',
