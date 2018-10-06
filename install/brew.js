@@ -15,7 +15,13 @@ const brew = [
   'rlwrap',
   'elixir',
   'pandoc',
-  'graphviz'
+  'graphviz',
+  'bat',
+  'prettyping',
+  'fzf',
+  'htop',
+  'ncdu',
+  'tldr'
 ]
 
 module.exports = brew

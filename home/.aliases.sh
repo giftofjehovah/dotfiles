@@ -24,12 +24,20 @@ alias wifi="wifi-password"
 # alias pip3="source activate python3"
 alias pip2="source deactivate"
 
-#gcloud commands
+# gcloud commands
 alias gstart="gcloud compute instances start"
 alias gstop="gcloud compute instances stop"
 alias ssh-fastai="gcloud compute ssh jon@fast-ai"
 alias open-fastai="open http://35.201.182.120:8888/"
 
-#docker commands
+# docker commands
 alias d="docker"
 alias dc="docker-compose"
+
+# replace cli commands with more useful ones
+alias cat="bat"
+alias ping="prettyping --nolegend"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="htop"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias help='tldr'
