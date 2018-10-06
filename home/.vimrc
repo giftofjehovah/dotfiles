@@ -49,7 +49,7 @@ set relativenumber " Use relative line numbers
 set number " turn on line numbers
 syntax on " Enable syntax highlighting
 set laststatus=2 " always show the status line
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
