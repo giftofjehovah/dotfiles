@@ -21,7 +21,8 @@ const brew = [
   'fzf',
   'htop',
   'ncdu',
-  'tldr'
+  'tldr',
+  'maven'
 ]
 
 module.exports = brew
