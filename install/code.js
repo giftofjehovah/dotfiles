@@ -19,7 +19,8 @@ const code = [
   'donjayamanne.jupyter',
   'formulahendry.code-runner',
   'tinkertrain.theme-panda',
-  'capaj.vscode-standardjs-snippets'
+  'capaj.vscode-standardjs-snippets',
+  'neuron.neuron-ipe'
 ]
 
 module.exports = code
