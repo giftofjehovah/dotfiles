@@ -138,6 +138,14 @@ function c() {
 	fi;
 }
 
+function i() {
+	if [ $# -eq 0 ]; then
+		idea .;
+	else
+		idea "$@";
+	fi;
+}
+
 function j() {
 	if [ $# -eq 0 ]; then
 		jupyter notebook .;
