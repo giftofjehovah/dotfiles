@@ -239,13 +239,13 @@ bot "symlinking vscode settings"
 rm ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.dot/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json;ok
 
-bot "symlinking vscode javascript snippets"
-rm ~/Library/Application\ Support/Code/User/snippets/javascript.json
-ln -s ~/.dot/vscode/javascript.json ~/Library/Application\ Support/Code/User/snippets/javascript.json;ok
+# bot "symlinking vscode javascript snippets"
+# rm ~/Library/Application\ Support/Code/User/snippets/javascript.json
+# ln -s ~/.dot/vscode/javascript.json ~/Library/Application\ Support/Code/User/snippets/javascript.json;ok
 
-bot "symlinking vscode javascript react snippets"
-rm ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json
-ln -s ~/.dot/vscode/javascriptreact.json ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json;ok
+# bot "symlinking vscode javascript react snippets"
+# rm ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json
+# ln -s ~/.dot/vscode/javascriptreact.json ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json;ok
 
 #############################
 # symlink atom keybindings  #

@@ -130,4 +130,5 @@
     "editorIndentGuide.activeBackground": "#c5c5c5"
   },
   "gitlens.historyExplorer.enabled": true,
+  "editor.snippetSuggestions": "top",
 }

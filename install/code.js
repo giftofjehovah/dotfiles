@@ -18,7 +18,9 @@ const code = [
   'mjmcloug.vscode-elixir',
   'donjayamanne.jupyter',
   'formulahendry.code-runner',
-  'tinkertrain.theme-panda'
+  'tinkertrain.theme-panda',
+  'capaj.vscode-standardjs-snippets',
+  'neuron.neuron-ipe'
 ]
 
 module.exports = code

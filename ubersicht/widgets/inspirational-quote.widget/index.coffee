@@ -12,7 +12,7 @@ style: """
 
 
   .output
-    padding: 5px 10px
+    # padding: 5px 10px
     width: 100%
     font-size: 20px
     font-weight: lighter
