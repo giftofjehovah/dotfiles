@@ -41,3 +41,6 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="htop"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias help='tldr'
+
+# project based aliases
+alias refreshCC="sh ~/delete-code-commit-keychain.sh"

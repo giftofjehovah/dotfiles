@@ -8,7 +8,6 @@
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
-  "workbench.iconTheme": "vscode-icons",
   "eslint.enable": false,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -120,7 +119,6 @@
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
   },
-  "vsicons.dontShowNewVersionMessage": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "triggerExpansionOnTab": true
@@ -131,4 +129,6 @@
   },
   "gitlens.historyExplorer.enabled": true,
   "editor.snippetSuggestions": "top",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true
 }

@@ -38,7 +38,8 @@ const brewCask = [
   'cheatsheet',
   'docker',
   'java',
-  'oni'
+  // 'oni',
+  'numi'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
