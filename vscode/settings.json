@@ -8,7 +8,6 @@
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
   "prettier.printWidth": 100,
-  "eslint.enable": false,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
     "xml": {
@@ -130,5 +129,7 @@
   "gitlens.historyExplorer.enabled": true,
   "editor.snippetSuggestions": "top",
   "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true
+  "gitlens.views.lineHistory.enabled": true,
+  "standard.enable": false,
+  "eslint.autoFixOnSave": true
 }

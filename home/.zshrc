@@ -50,3 +50,10 @@ export PATH=/Users/jon/.local/bin/luna-studio:$PATH
 # Set Spaceship ZSH as a prompt
 # autoload -U promptinit; promptinit
 # prompt spaceship
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /usr/local/Cellar/node/12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/Cellar/node/12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
