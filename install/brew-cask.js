@@ -16,7 +16,7 @@ const brewCask = [
   'ubersicht',
   'sourcetree',
   'intellij-idea',
-  'postman',
+  // 'postman',
   'sketch',
   // 'razer-synapse',
   'myo-connect',
@@ -40,7 +40,8 @@ const brewCask = [
   'java',
   // 'oni',
   'numi',
-  'notion'
+  'notion',
+  'insomnia'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
