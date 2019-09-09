@@ -16,6 +16,8 @@ const brewCask = [
   'ubersicht',
   'sourcetree',
   'intellij-idea',
+  'pycharm',
+  'datagrip',
   // 'postman',
   'sketch',
   // 'razer-synapse',
