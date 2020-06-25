@@ -22,7 +22,8 @@ const brew = [
   'htop',
   'ncdu',
   'tldr',
-  'maven'
+  'maven',
+  'kafka'
 ]
 
 module.exports = brew

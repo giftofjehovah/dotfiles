@@ -3,7 +3,6 @@
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.tabCompletion": true,
-  "editor.formatOnSave": false,
   "workbench.colorTheme": "Panda Syntax",
   "workbench.editor.enablePreview": false,
   "prettier.singleQuote": true,
@@ -130,9 +129,13 @@
   "editor.snippetSuggestions": "top",
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
-  "standard.enable": false,
-  "eslint.autoFixOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorBlinking": "smooth",
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "standard.enable": false
 }
