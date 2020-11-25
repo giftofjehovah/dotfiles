@@ -43,7 +43,8 @@ const brewCask = [
   // 'oni',
   'numi',
   'notion',
-  'insomnia'
+  'insomnia',
+  'lunar'
 ]
 
 // Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)

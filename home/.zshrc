@@ -57,3 +57,4 @@ export PATH=/Users/jon/.local/bin/luna-studio:$PATH
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+export PATH=/Users/jon/.local/bin:$PATH
