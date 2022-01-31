@@ -19,7 +19,5 @@ const installPackages = function(type) {
 installPackages('brew')
 installPackages('cask')
 installPackages('npm')
-installPackages('gem')
-installPackages('apm')
 installPackages('mas')
 installPackages('code')

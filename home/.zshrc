@@ -17,7 +17,7 @@ export PATH=/usr/local/bin/npm:$PATH
 export DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git npm brew osx extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode)
+plugins=(git npm brew macos extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode)
 # customise promot for agnoster theme
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then

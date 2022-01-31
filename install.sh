@@ -248,20 +248,6 @@ ln -s ~/.dot/vscode/settings.json ~/Library/Application\ Support/Code/User/setti
 # ln -s ~/.dot/vscode/javascriptreact.json ~/Library/Application\ Support/Code/User/snippets/javascriptreact.json;ok
 
 #############################
-# symlink atom keybindings  #
-#############################
-bot "symlinking atom keybindings"
-rm ~/.atom/keymap.cson
-ln -s ~/.dot/atom/keymap.cson ~/.atom/keymap.cson;ok
-
-#############################
-# symlink ubersicht widgets #
-#############################
-bot "symlinking ubersicht widgets"
-rm -rf ~/Library/Application\ Support/Übersicht/widgets
-ln -s ~/.dot/ubersicht/widgets ~/Library/Application\ Support/Übersicht/;ok
-
-#############################
 # create necessary folders  #
 #############################
 mkdir ~/dev
