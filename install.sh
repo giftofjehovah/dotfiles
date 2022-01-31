@@ -220,10 +220,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 running "installing vim plugins"
 vim +PlugInstall +qall
 
-running "compiling YCM"
-cd ~/.vim/plugged/youcompleteme/
-git submodule update --init --recursive
-~/.vim/plugged/youcompleteme/install.py --all
+# running "compiling YCM"
+# cd ~/.vim/plugged/youcompleteme/
+# git submodule update --init --recursive
+# ~/.vim/plugged/youcompleteme/install.py --all
 cd ~/.dot
 
 ##############################

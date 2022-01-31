@@ -27,6 +27,8 @@ prompt_context() {
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
 source $HOME/.functions.sh
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
 
@@ -58,3 +60,10 @@ export PATH=/Users/jon/.local/bin/luna-studio:$PATH
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export PATH=/Users/jon/.local/bin:$PATH
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"

@@ -105,7 +105,6 @@
   ],
   "prettier.trailingComma": "none",
   "editor.lineNumbers": "relative",
-  "window.zoomLevel": 0,
   "gitlens.keymap": "alternate",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -137,5 +136,9 @@
   "editor.cursorBlinking": "smooth",
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
-  "standard.enable": false
+  "standard.enable": false,
+  "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
