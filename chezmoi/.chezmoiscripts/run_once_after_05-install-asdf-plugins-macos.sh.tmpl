@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Install asdf Plugins                                                        #
+###############################################################################
+
+{{ $plugins := dict
+  "nodejs"     "latest"
+  "ruby"       "latest"
+  "python"     "latest"
+  "java"       "latest"
+  "pnpm"       "latest"
+  "yarn"       "latest"
+}}
+
+
+source ~/.local/share/chezmoi/helpers/echos.sh
+source ~/.local/share/chezmoi/helpers/requirers.sh 
+
+running "installing asdf plugins"
+
+{{ range (keys $plugins) -}}
+  {{- $key := . }}
+  {{- $val := get $plugins $key }}
+  
+  require_asdf {{ $key }} || true
+
+  {{- if not (eq $val "None") }}
+    asdf install {{ $key }} {{ $val }} || true
+    asdf global {{ $key }} {{ $val }} || true
+  {{- end -}}
+{{ end -}}

@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Install Homebrew Packages                                                   #
+###############################################################################
+
+{{ $cask_packages := list
+  "google-chrome"
+  "slack"
+  "alfred"
+  "spectacle"
+  "bartender"
+  "franz"
+  "intellij-idea"
+  "pycharm"
+  "datagrip"
+  "hyper"
+  "postgres"
+  "mongodb-compass"
+  "visual-studio-code"
+  "duet"
+  "cheatsheet"
+  "docker"
+  "numi"
+  "notion"
+  "insomnia"
+  "lunar"
+  "discord"
+  "tableplus"
+  "daedalus-mainnet"
+  "postman"
+  "font-awesome-terminal-fonts"
+  "font-hack"
+  "font-fira-code-nerd-font"
+}}
+
+source ~/.local/share/chezmoi/helpers/echos.sh
+source ~/.local/share/chezmoi/helpers/requirers.sh 
+
+running "installing brew cask packages"
+
+{{ range $cask_packages }}
+require_cask "{{ . }}"
+{{ end }}

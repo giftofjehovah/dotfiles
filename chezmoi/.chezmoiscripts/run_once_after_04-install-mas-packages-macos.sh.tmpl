@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Install Homebrew Packages                                                   #
+###############################################################################
+
+{{ $mas_packages := dict
+  "732710998"    "enpass"    
+  "497799835"    "xcode" 
+  "409183694"    "keynote" 
+  "409203825"    "numbers" 
+  "409201541"    "pages" 
+  "824171161"    "affinity designer" 
+  "1475387142"   "tailscale" 
+  "1564688210"   "glance" 
+  "462058435"    "excel" 
+  "462062816"    "powerpoint" 
+  "1176895641"   "spark" 
+  "975937182"    "fantastical" 
+}}
+
+source ~/.local/share/chezmoi/helpers/echos.sh
+source ~/.local/share/chezmoi/helpers/requirers.sh 
+
+running "installing mas packages"
+
+mas account &> /dev/null
+if [[ $? -ne 0 ]]; then
+  error "Please login to Mac app store first, then run command again"
+  mas open
+  exit 0
+fi
+
+
+{{ range (keys $mas_packages) }}
+require_mas "{{ . }}"
+{{ end }}

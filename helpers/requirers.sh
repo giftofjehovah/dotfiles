@@ -11,11 +11,11 @@ function require_cask() {
     running "brew cask $1"
     brew cask list $1 > /dev/null 2>&1 | true
     if [[ ${PIPESTATUS[0]} != 0 ]]; then
-        action "brew cask install $1 $2"
-        brew cask install $1
+        action "brew install --cask $1 $2"
+        brew install --cask $1
         if [[ $? != 0 ]]; then
             error "failed to install $1! aborting..."
-            # exit -1
+            exit -1
         fi
     fi
     ok
@@ -112,6 +112,16 @@ function require_nvm() {
         require_brew nvm
         . ~/.bashrc
         nvm install $1
+    fi
+    ok
+}
+
+function require_asdf() {
+    running "installing asdf plugin: $1"
+    asdf plugin list | grep $1@ > /dev/null
+    if [[ $? != 0 ]]; then
+        action "installing plugin $1"
+        asdf plugin add $1
     fi
     ok
 }

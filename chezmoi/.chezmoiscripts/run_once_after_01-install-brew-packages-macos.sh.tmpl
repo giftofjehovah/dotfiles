@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Install Homebrew Packages                                                   #
+###############################################################################
+
+{{ $brew_packages := list
+  "mas"
+  "yarn"
+  "htop"
+  "prettyping"
+  "tldr"
+  "git"
+  "kubernetes-cli"
+  "helm"
+  "mackup"
+  "chezmoi"
+  "zoxide"
+  "fontconfig"
+  "zsh"
+  "asdf"
+  "tar"
+  "gpg"
+  "starship"
+}}
+
+source ~/.local/share/chezmoi/helpers/echos.sh
+source ~/.local/share/chezmoi/helpers/requirers.sh 
+
+running "installing brew packages"
+
+{{ range $brew_packages }}
+require_brew "{{ . }}"
+{{ end }}
