@@ -1,7 +1,6 @@
 [".oh-my-zsh"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
-    executable = true
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
