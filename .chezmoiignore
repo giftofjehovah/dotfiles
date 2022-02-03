@@ -1,0 +1,12 @@
+fonts/
+helpers/
+home/
+install/
+settings/
+snippets/
+vscode/
+wallpaper/
+install-packages.js
+install.sh
+package.json
+package-lock.json
