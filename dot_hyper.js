@@ -5,13 +5,14 @@ module.exports = {
       hideOnBlur: true,
       hotkey: 'Ctrl+`'
     },
+    webGLRenderer: false,
     opacity: 0.9,
     // default font size in pixels for all tabs
     fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily:
-      '"Fira Code", "Source Code Pro", "FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      '"FiraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -83,20 +84,39 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: false,
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    hyperline: {
+      plugins: [
+        "ip",
+        "cpu",
+        "memory",
+        "network",
+        "battery"
+      ]
+    }
   },
+
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   // examples:
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-snazzy', 'hypercwd', 'hyper-tabs-enhanced', 'hyper-opacity', 'hyperterm-summon'],
+  plugins: [
+    'hyper-snazzy',
+    'hyper-samewd',
+    'hyper-tabs-enhanced',
+    'hyper-opacity',
+    'hyperterm-summon',
+    'hyper-font-ligatures',
+    'hyper-search',
+    'hyperline'
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

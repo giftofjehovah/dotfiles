@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [[ "Yes" == $(reboot) ]]
 then
   echo "Rebooting."

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Install Homebrew (CLI Packages)                                             #
+# Install Homebrew CLI                                                        #
 ###############################################################################
 source ~/.local/share/chezmoi/helpers/echos.sh
 source ~/.local/share/chezmoi/helpers/requirers.sh 

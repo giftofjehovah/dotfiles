@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Install Homebrew Cask (UI Packages)                                         #
+# Install Homebrew Cask CLI                                                   #
 ###############################################################################
 
 source ~/.local/share/chezmoi/helpers/echos.sh

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Install gem packages                                                        #
+###############################################################################
+
+{{ $gem_packages := list
+  "colorls"
+}}
+
+source ~/.local/share/chezmoi/helpers/echos.sh
+source ~/.local/share/chezmoi/helpers/requirers.sh 
+
+running "installing gem packages"
+
+{{ range $gem_packages }}
+require_gem "{{ . }}"
+{{ end }}

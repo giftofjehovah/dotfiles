@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Install Homebrew Packages                                                   #
+# Install Mac Apps                                                            #
 ###############################################################################
 
 {{ $mas_packages := dict
@@ -24,12 +24,12 @@ source ~/.local/share/chezmoi/helpers/requirers.sh
 
 running "installing mas packages"
 
-mas account &> /dev/null
-if [[ $? -ne 0 ]]; then
-  error "Please login to Mac app store first, then run command again"
-  mas open
-  exit 0
-fi
+# mas account &> /dev/null
+# if [[ $? -ne 0 ]]; then
+#   error "Please login to Mac app store first, then run command again"
+#   mas open
+#   exit 0
+# fi
 
 
 {{ range (keys $mas_packages) }}

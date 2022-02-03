@@ -44,3 +44,8 @@ alias help='tldr'
 
 # project based aliases
 alias refreshCC="sh ~/delete-code-commit-keychain.sh"
+
+# colorls
+alias ls='colorls --group-directories-first'
+alias la='colorls --group-directories-first --almost-all'
+alias ll='colorls --group-directories-first --almost-all --long'
