@@ -71,34 +71,34 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
 }
 
-function github() {
-  # Are we in a git repo? Don't show any output to user
-  git rev-parse --git-dir &> /dev/null
-  if [ $? -eq 0 ]; then
-      # if so then check for the existance of remote url called origin
-      git remote get-url origin &> /dev/null
-      if [ $? -eq 0 ]; then
-        URL="$(git remote get-url origin | sed 's/\.git//g' )"
-        URL=${URL/git\@github\.com\:/https://github.com/}
-        URL=${URL/#ssh\:\/\/git\@github\.com\//https://github.com/}
-        echo "Remote Origin Found. Opening: $URL"
-      else
-        URL="https://github.com/new"
-        echo "No Remote Origin Found. Opening: $URL"
-      fi
-      open $URL
-  else
-      echo "No Local Repo Found. Do you want to create one? [y/N] "
-      read response
-      response="$(echo "$response" | tr '[:upper:]' '[:lower:]')"
-      if [[ $response =~ ^(yes|y)$ ]]; then
-          git init
-	  URL="https://github.com/new"
-          echo "No Remote Origin Found. Opening: $URL"
-	  open $URL
-      fi
-  fi
-}
+# function github() {
+#   # Are we in a git repo? Don't show any output to user
+#   git rev-parse --git-dir &> /dev/null
+#   if [ $? -eq 0 ]; then
+#       # if so then check for the existance of remote url called origin
+#       git remote get-url origin &> /dev/null
+#       if [ $? -eq 0 ]; then
+#         URL="$(git remote get-url origin | sed 's/\.git//g' )"
+#         URL=${URL/git\@github\.com\:/https://github.com/}
+#         URL=${URL/#ssh\:\/\/git\@github\.com\//https://github.com/}
+#         echo "Remote Origin Found. Opening: $URL"
+#       else
+#         URL="https://github.com/new"
+#         echo "No Remote Origin Found. Opening: $URL"
+#       fi
+#       open $URL
+#   else
+#       echo "No Local Repo Found. Do you want to create one? [y/N] "
+#       read response
+#       response="$(echo "$response" | tr '[:upper:]' '[:lower:]')"
+#       if [[ $response =~ ^(yes|y)$ ]]; then
+#           git init
+# 	  URL="https://github.com/new"
+#           echo "No Remote Origin Found. Opening: $URL"
+# 	  open $URL
+#       fi
+#   fi
+# }
 
 # `a` with no arguments opens the current directory in Atom Editor, otherwise
 # opens the given location
