@@ -6,7 +6,7 @@ export CASE_SENSITIVE="true"
 export DISABLE_AUTO_TITLE="true"
 export EDITOR=vim
 
-plugins=(git npm brew macos extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode asdf)
+plugins=(git npm brew macos extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode asdf git-open)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
 source $HOME/.functions.sh

@@ -16,3 +16,9 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+[".oh-my-zsh/custom/plugins/git-open"]
+    type = "archive"
+    url = "https://github.com/paulirish/git-open/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
