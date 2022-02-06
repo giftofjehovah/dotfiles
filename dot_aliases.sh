@@ -1,6 +1,8 @@
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dev="cd ~/dev"
+alias dev-w="cd ~/dev/work"
+alias dev-p="cd ~/dev/personal" 
 alias dotf="cd ~/.local/share/chezmoi"
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
