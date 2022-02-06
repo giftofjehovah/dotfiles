@@ -10,3 +10,4 @@ install-packages.js
 install.sh
 package.json
 package-lock.json
+.old_dot_files/
