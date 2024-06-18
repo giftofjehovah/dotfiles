@@ -15,9 +15,6 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
 
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="/Users/jon/anaconda/bin:$PATH"
-export PATH=/Users/jon/.local/bin:$PATH
-export PATH=/usr/local/bin:$PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"

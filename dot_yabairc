@@ -1,18 +1,23 @@
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp
 
+# yabai -m config external_bar               all:30:0     
+
+# Override default layout for space 3 only
+# yabai -m config --space 3 layout stack
+
 # New window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement second_child
 
 # padding set to 12px
 yabai -m config top_padding 12
 yabai -m config bottom_padding 12
-yabai -m config left_padding 12
+yabai -m config left_padding 34
 yabai -m config right_padding 12
 yabai -m config window_gap 12
 
 # center mouse on window with focus
-yabai -m config mouse_follows_focus on
+# yabai -m config mouse_follows_focus on
 
 # modifier for clicking and dragging with mouse
 yabai -m config mouse_modifier alt
@@ -25,6 +30,28 @@ yabai -m config mouse_action2 resize
 # when window is dropped in center of another window, swap them (on edges it will split it)
 yabai -m mouse_drop_action swap
 
+yabai -m space 1 --label main
+yabai -m space 3 --label chat
+yabai -m space 4 --label dev
+yabai -m space 5 --label others
+
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Warp$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^Docker Desktop$" manage=off
+yabai -m rule --add app="^Hammerspoon$" manage=off
+yabai -m rule --add app="^Bartender$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^(Arc|Superhuman)$" space=main
+yabai -m rule --add app="^(Beeper|Discord|Slack)" space=chat
+yabai -m rule --add app="^(Datagrip|Visual Studio Code|Warp|Cursor)" space=dev
+yabai -m rule --add app="^(Cron|Capacities)" space=others
+
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
+
+yabai -m signal --add event=window_created app="Beeper" action="yabai -m window $YABAI_WINDOW_ID --stack $(yabai -m query --windows --space 2 | jq --arg app Discord '.[] | select(.app == $ARGS.named.app) | .id')"
+yabai -m signal --add event=window_created app="Discord" action="yabai -m window $YABAI_WINDOW_ID --stack $(yabai -m query --windows --space 2 | jq --arg app Beeper '.[] | select(.app == $ARGS.named.app) | .id')"
