@@ -37,6 +37,7 @@ packages:
     - 'kubectl'
     - 'starship'
     - 'eza'
+    - 'chezmoi'
   casks:
     - 'google-chrome'
     - 'arc'
@@ -63,5 +64,7 @@ packages:
     - 'superhuman'
     - 'warp'
   mas:
-    - '1482713641' # moomooo
-    - '1333542190' # 1password
+    - name: '1password'
+      id: 1333542190 
+    - name: 'moomoo'
+      id: 1482713641 
