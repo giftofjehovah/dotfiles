@@ -18,3 +18,4 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"

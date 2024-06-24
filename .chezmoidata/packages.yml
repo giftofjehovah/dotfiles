@@ -39,6 +39,7 @@ packages:
     - 'eza'
     - 'chezmoi'
     - 'terraform'
+    - 'sops'
   casks:
     - 'google-chrome'
     - 'arc'
