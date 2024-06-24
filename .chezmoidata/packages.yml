@@ -38,6 +38,7 @@ packages:
     - 'starship'
     - 'eza'
     - 'chezmoi'
+    - 'terraform'
   casks:
     - 'google-chrome'
     - 'arc'
