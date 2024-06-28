@@ -42,6 +42,7 @@ packages:
     - 'terraform'
     - 'sops'
     - 'databricks'
+    - 'k9s'
   casks:
     - 'google-chrome'
     - 'arc'
