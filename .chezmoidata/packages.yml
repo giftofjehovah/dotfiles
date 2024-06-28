@@ -2,6 +2,7 @@ packages:
   taps:
     - 'koekeishiya/formulae'
     - 'common-fate/granted'
+    - 'databricks/tap'
   brews:
     - 'mas'
     - 'yarn'
@@ -40,6 +41,7 @@ packages:
     - 'chezmoi'
     - 'terraform'
     - 'sops'
+    - 'databricks'
   casks:
     - 'google-chrome'
     - 'arc'
