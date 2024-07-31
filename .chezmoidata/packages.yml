@@ -43,6 +43,7 @@ packages:
     - 'sops'
     - 'databricks'
     - 'k9s'
+    - 'git-delta'
   casks:
     - 'google-chrome'
     - 'arc'
