@@ -15,7 +15,9 @@ source $HOME/.functions.sh
 ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=$PATH:~/bin
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
+. "/Users/jonathan/.stash/env" # stash setup

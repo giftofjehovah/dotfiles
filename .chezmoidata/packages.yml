@@ -3,6 +3,7 @@ packages:
     - 'koekeishiya/formulae'
     - 'common-fate/granted'
     - 'databricks/tap'
+    - 'warrensbox/tap'
   brews:
     - 'mas'
     - 'yarn'
@@ -44,6 +45,8 @@ packages:
     - 'databricks'
     - 'k9s'
     - 'git-delta'
+    - 'tfswitch'
+    - 'stern'
   casks:
     - 'google-chrome'
     - 'arc'
