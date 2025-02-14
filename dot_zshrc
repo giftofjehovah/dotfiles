@@ -16,6 +16,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$PATH:~/bin
+export PATH=$PATH:~/.asdf/shims/
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
