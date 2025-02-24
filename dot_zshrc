@@ -7,7 +7,7 @@ export DISABLE_AUTO_TITLE="true"
 export EDITOR=vim
 export DISABLE_AUTO_UPDATE="true"
 
-plugins=(git npm brew macos extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode asdf git-open)
+plugins=(git npm brew macos extract z zsh-syntax-highlighting zsh-autosuggestions vi-mode git-open asdf)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
 source $HOME/.functions.sh
@@ -16,7 +16,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$PATH:~/bin
-export PATH=$PATH:~/.asdf/shims/
+export PATH=~/.asdf/shims/:$PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
@@ -28,3 +28,13 @@ eval "$(direnv hook zsh)"
     . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
  fi
  # End Nix
+
+# React Native needs this to be set
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Make Android tools available globally
+export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
