@@ -170,7 +170,7 @@ automatically-unhide-macos-hidden-apps = false
 
 
 [[on-window-detected]]
-    if.app-name-regex-substring = '^(Finder)$'
+    if.app-name-regex-substring = '^(Finder|1Password 7)$'
     run = 'layout floating'
 
 [[on-window-detected]]
