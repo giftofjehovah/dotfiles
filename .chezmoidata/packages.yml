@@ -4,6 +4,7 @@ packages:
     - 'common-fate/granted'
     - 'databricks/tap'
     - 'warrensbox/tap'
+    - 'nikitabobko/tap'
   brews:
     - 'mas'
     - 'yarn'
@@ -21,8 +22,8 @@ packages:
     - 'postgresql'
     - 'starship'
     - 'awscli'
-    - 'yabai'
-    - 'skhd'
+    # - 'yabai'
+    # - 'skhd'
     - 'go-task'
     - 'granted'
     - 'direnv'
@@ -72,6 +73,7 @@ packages:
     - 'raycast'
     - 'superhuman'
     - 'warp'
+    - 'aerospace'
   mas:
     - name: '1password'
       id: 1333542190 
