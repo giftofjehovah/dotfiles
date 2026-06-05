@@ -49,4 +49,6 @@ omp-upgrade() {
   omp update && bash "$HOME/.omp/agent/patch-task-model.sh"
 }
 export PATH="/Users/jonathan/.local/bin:$PATH"
+{{- if eq .profile "work" }}
 export HINDSIGHT_API_URL=http://localhost:8888
+{{- end }}
