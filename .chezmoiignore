@@ -11,4 +11,5 @@ install-packages.js
 install.sh
 package.json
 package-lock.json
+README.md
 .old_dot_files/
