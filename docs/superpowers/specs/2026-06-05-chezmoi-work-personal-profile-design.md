@@ -27,7 +27,7 @@ profile = {{ $profile | quote }}
 
 **Operational notes:**
 - Run `chezmoi init` once per machine before the first `apply`. It does not modify any dotfiles.
-- To change a machine's profile later: edit `~/.config/chezmoi/chezmoi.toml`, or re-init with `chezmoi init --promptString profile=work`.
+- To change a machine's profile later: edit `~/.config/chezmoi/chezmoi.toml`, or re-init with `chezmoi init --promptChoice profile=work`.
 - `.profile` becomes available everywhere as `{{ .profile }}` in templates.
 
 ## Packages
