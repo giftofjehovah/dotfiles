@@ -1,1 +1,5 @@
-mode = "symlink" 
+{{- $profile := promptChoiceOnce . "profile" "Which machine profile?" (list "work" "personal") -}}
+mode = "symlink"
+
+[data]
+profile = {{ $profile | quote }}
