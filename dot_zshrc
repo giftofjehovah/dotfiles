@@ -16,6 +16,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTRS=(main brackets pattern cursor root line)
 
 export PATH=$PATH:~/bin
 export PATH=~/.asdf/shims/:$PATH
+export PATH=~/.local/bin/:$PATH
 # export PATH=$PATH:"$HOME/.yarn/bin"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -36,4 +37,16 @@ export LANG=en_US.UTF-8
 export ANDROID_HOME=$HOME/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_HOME/emulator
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
+# bun completions
+[ -s "/Users/jonathan/.bun/_bun" ] && source "/Users/jonathan/.bun/_bun"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# omp upgrade: update OMP then re-apply local patches
+omp-upgrade() {
+  omp update && bash "$HOME/.omp/agent/patch-task-model.sh"
+}
+export PATH="/Users/jonathan/.local/bin:$PATH"
+export HINDSIGHT_API_URL=http://localhost:8888

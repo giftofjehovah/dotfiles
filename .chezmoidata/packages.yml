@@ -48,6 +48,7 @@ packages:
     - 'git-delta'
     # - 'tfswitch'
     - 'stern'
+    - 'gh'
   casks:
     - 'google-chrome'
     - 'arc'
@@ -74,6 +75,7 @@ packages:
     - 'aerospace'
     - 'claude-code'
     - 'claude'
+    - 'ngrok'
   mas:
     - name: '1password'
       id: 1333542190 
