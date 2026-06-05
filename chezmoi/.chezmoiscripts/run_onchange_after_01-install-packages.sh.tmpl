@@ -1,13 +1,12 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-{{- $p     := .packages.common -}}
-{{- $extra := index .packages .profile -}}
-{{- $taps  := concat (default (list) $p.taps)  (default (list) (index $extra "taps")) -}}
-{{- $brews := concat (default (list) $p.brews) (default (list) (index $extra "brews")) -}}
-{{- $casks := concat (default (list) $p.casks) (default (list) (index $extra "casks")) -}}
-{{- $mas   := concat (default (list) $p.mas)   (default (list) (index $extra "mas")) -}}
-
+{{ $p     := .packages.common -}}
+{{ $extra := index .packages .profile -}}
+{{ $taps  := concat (default (list) $p.taps)  (default (list) (index $extra "taps")) -}}
+{{ $brews := concat (default (list) $p.brews) (default (list) (index $extra "brews")) -}}
+{{ $casks := concat (default (list) $p.casks) (default (list) (index $extra "casks")) -}}
+{{ $mas   := concat (default (list) $p.mas)   (default (list) (index $extra "mas")) -}}
 brew bundle -f -v --file=/dev/stdin <<EOF
 {{ range $taps -}}
 tap {{ . | quote }}
