@@ -135,21 +135,24 @@ packages:
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-{{- $p     := .packages.common -}}
-{{- $extra := index .packages .profile -}}
-{{- $taps  := concat (default (list) $p.taps)  (default (list) $extra.taps) -}}
-{{- $brews := concat (default (list) $p.brews) (default (list) $extra.brews) -}}
-{{- $casks := concat (default (list) $p.casks) (default (list) $extra.casks) -}}
-{{- $mas   := concat (default (list) $p.mas)   (default (list) $extra.mas) -}}
-
+{{ $p     := .packages.common -}}
+{{ $extra := index .packages .profile -}}
+{{ $taps  := concat (default (list) $p.taps)  (default (list) (index $extra "taps")) -}}
+{{ $brews := concat (default (list) $p.brews) (default (list) (index $extra "brews")) -}}
+{{ $casks := concat (default (list) $p.casks) (default (list) (index $extra "casks")) -}}
+{{ $mas   := concat (default (list) $p.mas)   (default (list) (index $extra "mas")) -}}
 brew bundle -f -v --file=/dev/stdin <<EOF
-{{ range $taps  -}}tap {{ . | quote }}
+{{ range $taps -}}
+tap {{ . | quote }}
 {{ end -}}
-{{ range $brews -}}brew {{ . | quote }}
+{{ range $brews -}}
+brew {{ . | quote }}
 {{ end -}}
-{{ range $casks -}}cask {{ . | quote }}
+{{ range $casks -}}
+cask {{ . | quote }}
 {{ end -}}
-{{ range $mas   -}}mas {{ .name | quote }}, id: {{ .id }}
+{{ range $mas -}}
+mas {{ .name | quote }}, id: {{ .id }}
 {{ end -}}
 EOF
 {{ end -}}
