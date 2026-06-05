@@ -219,3 +219,23 @@ On the personal machine, same checks with `personal` chosen; confirm `mas` brew 
 ## Open questions
 
 None at write time. Personal git identity defaulted to `jonathan.pwh@gmail.com` from the user's global config; correct in the template if a different identity is preferred.
+
+## Runbook (post-implementation)
+
+**New machine setup (either profile):**
+1. `brew install chezmoi`
+2. `chezmoi init https://github.com/<user>/dotfiles.git` — prompts for `profile` (work/personal).
+3. `chezmoi apply -v` — installs brew bundle for that profile and renders templated dotfiles.
+
+**Switching a machine's profile:**
+1. `chezmoi init --promptChoice profile=<work|personal>` (or edit `~/.config/chezmoi/chezmoi.toml` and change the `profile` value under `[data]`).
+2. `chezmoi apply -v`. Note that `brew bundle` does not uninstall packages no longer in the manifest — remove those manually with `brew uninstall <name>` if desired.
+
+**Adding a new package:**
+- Edit `.chezmoidata/packages.yml`, place under the right bucket (`common`/`work`/`personal`).
+- `chezmoi apply` — the `run_onchange_*` script re-runs because its hash changes.
+
+**Adding a new per-profile dotfile diff:**
+- Rename the file to add a `.tmpl` suffix (use `git mv` so history is kept).
+- Wrap diverging blocks in `{{ if eq .profile "work" }} ... {{ else }} ... {{ end }}`.
+- `chezmoi diff <path>` then `chezmoi apply <path>` to verify.
