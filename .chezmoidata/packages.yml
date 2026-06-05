@@ -1,83 +1,84 @@
 packages:
-  taps:
-    - 'koekeishiya/formulae'
-    - 'common-fate/granted'
-    - 'databricks/tap'
-    - 'warrensbox/tap'
-    - 'nikitabobko/tap'
-  brews:
-    - 'mas'
-    - 'yarn'
-    - 'htop'
-    - 'prettyping'
-    - 'tldr'
-    - 'git'
-    - 'helm'
-    - 'mackup'
-    - 'zoxide'
-    - 'fontconfig'
-    - 'asdf'
-    - 'bat'
-    - 'gpg'
-    - 'postgresql'
-    - 'starship'
-    - 'awscli'
-    # - 'yabai'
-    # - 'skhd'
-    - 'go-task'
-    - 'granted'
-    - 'direnv'
-    - 'coreutils'
-    - 'jq'
-    - 'tree'
-    - 'wget'
-    - 'z'
-    - 'adr-tools'
-    - 'fzf'
-    - 'yq'
-    - 'uv'
-    - 'kubectx'
-    - 'kubectl'
-    - 'starship'
-    - 'eza'
-    - 'chezmoi'
-    # - 'terraform'
-    - 'sops'
-    - 'databricks'
-    - 'k9s'
-    - 'git-delta'
-    # - 'tfswitch'
-    - 'stern'
-    - 'gh'
-  casks:
-    - 'google-chrome'
-    - 'arc'
-    - 'slack'
-    - 'bartender'
-    - 'visual-studio-code'
-    - 'docker'
-    - 'notion'
-    - 'discord'
-    - 'zoom'
-    - 'font-awesome-terminal-fonts'
-    - 'font-hack'
-    - 'font-fira-code-nerd-font'
-    - 'beeper'
-    - 'capacities'
-    - 'cursor'
-    - 'discord'
-    - 'figma'
-    - 'jetbrains-toolbox'
-    - 'notion-calendar'
-    - 'raycast'
-    - 'superhuman'
-    - 'warp'
-    - 'aerospace'
-    - 'claude-code'
-    - 'claude'
-    - 'ngrok'
-  mas:
-    - name: '1password'
-      id: 1333542190 
-    - name: 'moomoo'
-      id: 1482713641 
+  common:
+    taps:
+      - nikitabobko/tap
+    brews:
+      - yarn
+      - htop
+      - prettyping
+      - tldr
+      - git
+      - mackup
+      - zoxide
+      - fontconfig
+      - asdf
+      - bat
+      - gpg
+      - starship
+      - direnv
+      - coreutils
+      - jq
+      - tree
+      - wget
+      - z
+      - adr-tools
+      - fzf
+      - yq
+      - uv
+      - eza
+      - chezmoi
+      - git-delta
+      - gh
+    casks:
+      - google-chrome
+      - bartender
+      - visual-studio-code
+      - font-awesome-terminal-fonts
+      - font-hack
+      - font-fira-code-nerd-font
+      - aerospace
+    mas: []
+
+  work:
+    taps:
+      - common-fate/granted
+      - databricks/tap
+    brews:
+      - helm
+      - postgresql
+      - awscli
+      - go-task
+      - granted
+      - kubectx
+      - kubectl
+      - sops
+      - databricks
+      - k9s
+      - stern
+    casks:
+      - slack
+      - docker
+      - jetbrains-toolbox
+      - superhuman
+      - figma
+
+  personal:
+    brews:
+      - mas
+    casks:
+      - arc
+      - discord
+      - zoom
+      - notion
+      - notion-calendar
+      - capacities
+      - beeper
+      - cursor
+      - raycast
+      - warp
+      - claude-code
+      - claude
+      - ngrok
+    mas:
+      - { name: '1password', id: 1333542190 }
+      - { name: 'moomoo',    id: 1482713641 }
